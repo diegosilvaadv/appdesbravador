@@ -118,7 +118,19 @@ final parametersBuilderMap =
   'detalhesClubes': (data) async => ParameterData(
         allParams: {},
       ),
-  'Login': ParameterData.none(),
+  'auth_4_OnboardingOne': (data) async => ParameterData(
+        allParams: {
+          'index': getParameter<int>(data, 'index'),
+        },
+      ),
+  'auth_4_Welcome': ParameterData.none(),
+  'auth_4_OnboardingPhoneVerify': (data) async => ParameterData(
+        allParams: {
+          'phoneNumber': getParameter<String>(data, 'phoneNumber'),
+          'isLogin': getParameter<bool>(data, 'isLogin'),
+        },
+      ),
+  'auth_4_Login': ParameterData.none(),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

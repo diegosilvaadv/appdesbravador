@@ -1,8 +1,8 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/supabase/supabase.dart';
-import '/components/nav_bar_widget.dart';
-import '/components/salvar_especialidade_widget.dart';
+import '/components/nav_bar/nav_bar_widget.dart';
+import '/components/salvar_especialidade/salvar_especialidade_widget.dart';
 import '/flutter_flow/flutter_flow_autocomplete_options_list.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -516,7 +516,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                 FFButtonWidget(
                                                   onPressed: () async {
                                                     context.pushNamed(
-                                                      'Login',
+                                                      'auth_4_Login',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
                                                             TransitionInfo(

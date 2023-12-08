@@ -1,6 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/components/editar_perfil_widget.dart';
-import '/components/nav_bar_widget.dart';
+import '/components/editar_perfil/editar_perfil_widget.dart';
+import '/components/nav_bar/nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -389,7 +389,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                                         .clearRedirectLocation();
 
                                                     context.goNamedAuth(
-                                                      'Login',
+                                                      'auth_4_Login',
                                                       context.mounted,
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
@@ -525,7 +525,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                                 FFButtonWidget(
                                                   onPressed: () async {
                                                     context.pushNamed(
-                                                      'Login',
+                                                      'null',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
                                                             TransitionInfo(

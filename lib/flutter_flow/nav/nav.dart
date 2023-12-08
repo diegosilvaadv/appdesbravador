@@ -114,9 +114,29 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'Login',
-          path: '/login',
-          builder: (context, params) => LoginWidget(),
+          name: 'auth_4_OnboardingOne',
+          path: '/auth4OnboardingOne',
+          builder: (context, params) => Auth4OnboardingOneWidget(
+            index: params.getParam('index', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'auth_4_Welcome',
+          path: '/auth4Welcome',
+          builder: (context, params) => Auth4WelcomeWidget(),
+        ),
+        FFRoute(
+          name: 'auth_4_OnboardingPhoneVerify',
+          path: '/auth4OnboardingPhoneVerify',
+          builder: (context, params) => Auth4OnboardingPhoneVerifyWidget(
+            phoneNumber: params.getParam('phoneNumber', ParamType.String),
+            isLogin: params.getParam('isLogin', ParamType.bool),
+          ),
+        ),
+        FFRoute(
+          name: 'auth_4_Login',
+          path: '/auth4Login',
+          builder: (context, params) => Auth4LoginWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
