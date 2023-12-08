@@ -577,8 +577,22 @@ class _LoginWidgetState extends State<LoginWidget>
                                                       }
 
                                                       context.goNamedAuth(
-                                                          'HomePage',
-                                                          context.mounted);
+                                                        'HomePage',
+                                                        context.mounted,
+                                                        extra: <String,
+                                                            dynamic>{
+                                                          kTransitionInfoKey:
+                                                              TransitionInfo(
+                                                            hasTransition: true,
+                                                            transitionType:
+                                                                PageTransitionType
+                                                                    .bottomToTop,
+                                                            duration: Duration(
+                                                                milliseconds:
+                                                                    1000),
+                                                          ),
+                                                        },
+                                                      );
                                                     },
                                                     text: 'Entrar',
                                                     options: FFButtonOptions(
