@@ -152,8 +152,10 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                               children: [
                                                 AuthUserStreamWidget(
                                                   builder: (context) => Text(
-                                                    currentUserDisplayName
-                                                        .maybeHandleOverflow(
+                                                    valueOrDefault<String>(
+                                                      currentUserDisplayName,
+                                                      'Seu Nome',
+                                                    ).maybeHandleOverflow(
                                                       maxChars: 20,
                                                       replacement: '…',
                                                     ),
@@ -181,8 +183,10 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                               children: [
                                                 SelectionArea(
                                                     child: GradientText(
-                                                  currentUserEmail
-                                                      .maybeHandleOverflow(
+                                                  valueOrDefault<String>(
+                                                    currentUserEmail,
+                                                    'email',
+                                                  ).maybeHandleOverflow(
                                                     maxChars: 15,
                                                     replacement: '…',
                                                   ),

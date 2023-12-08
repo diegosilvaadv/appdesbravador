@@ -187,8 +187,10 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                               children: [
                                                 SelectionArea(
                                                     child: GradientText(
-                                                  currentUserEmail
-                                                      .maybeHandleOverflow(
+                                                  valueOrDefault<String>(
+                                                    currentUserEmail,
+                                                    'email',
+                                                  ).maybeHandleOverflow(
                                                     maxChars: 15,
                                                     replacement: '…',
                                                   ),
@@ -238,10 +240,13 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                 ),
                                                 AuthUserStreamWidget(
                                                   builder: (context) => Text(
-                                                    valueOrDefault(
-                                                        currentUserDocument
-                                                            ?.meuClube,
-                                                        ''),
+                                                    valueOrDefault<String>(
+                                                      valueOrDefault(
+                                                          currentUserDocument
+                                                              ?.meuClube,
+                                                          ''),
+                                                      'seu clube',
+                                                    ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium
@@ -316,7 +321,12 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                 AuthUserStreamWidget(
                                                   builder: (context) => Text(
                                                     valueOrDefault<String>(
-                                                      '${functions.dataAtualMenosIncion(currentUserDocument!.datadeInicioLenco!)} anos de jornada',
+                                                      '${valueOrDefault<String>(
+                                                        functions.dataAtualMenosIncion(
+                                                            currentUserDocument!
+                                                                .datadeInicioLenco!),
+                                                        '0',
+                                                      )} anos de jornada',
                                                       'anos de jornada',
                                                     ),
                                                     style: FlutterFlowTheme.of(
@@ -400,15 +410,19 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                     child: AuthUserStreamWidget(
                                                       builder: (context) =>
                                                           Text(
-                                                        '${formatNumber(
-                                                          valueOrDefault(
-                                                              currentUserDocument
-                                                                  ?.especConcluidas,
-                                                              0),
-                                                          formatType:
-                                                              FormatType.custom,
-                                                          format: '',
-                                                          locale: '',
+                                                        '${valueOrDefault<String>(
+                                                          formatNumber(
+                                                            valueOrDefault(
+                                                                currentUserDocument
+                                                                    ?.especConcluidas,
+                                                                0),
+                                                            formatType:
+                                                                FormatType
+                                                                    .custom,
+                                                            format: '',
+                                                            locale: '',
+                                                          ),
+                                                          '0',
                                                         )} de 475',
                                                         style: FlutterFlowTheme
                                                                 .of(context)
