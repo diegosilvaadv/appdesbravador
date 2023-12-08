@@ -13,7 +13,20 @@
           "package_name": "com.adv7dev.eusoudesbravadores"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1028846139837-c7e8o4d22eukpbr67r1ic767ricpms53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adv7dev.eusoudesbravadores",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "1028846139837-li261vdgqdjppa2p5c79nt5f0ero7h29.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC42PHM1PSz8_9kl69uuCAFP_yR6meSips"
@@ -21,26 +34,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1028846139837:android:bfc3e910fe7d373875bad4",
-        "android_client_info": {
-          "package_name": "com.mycompany.eusoudesbravadores"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyC42PHM1PSz8_9kl69uuCAFP_yR6meSips"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028846139837-li261vdgqdjppa2p5c79nt5f0ero7h29.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1028846139837-g0tlnvif70h21j31la0jhh4d4rgbjh6j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.adv7dev.eusoudesbravadores"
+              }
+            }
+          ]
         }
       }
     }
