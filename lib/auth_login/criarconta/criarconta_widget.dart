@@ -437,7 +437,7 @@ class _CriarcontaWidgetState extends State<CriarcontaWidget>
                         ).animateOnPageLoad(
                             animationsMap['textOnPageLoadAnimation1']!),
                       ),
-                    ].addToStart(const SizedBox(height: 70.0)),
+                    ].addToStart(const SizedBox(height: 35.0)),
                   ),
                 ).animateOnPageLoad(
                     animationsMap['containerOnPageLoadAnimation1']!),
@@ -452,7 +452,7 @@ class _CriarcontaWidgetState extends State<CriarcontaWidget>
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
