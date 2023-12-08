@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1028846139837",
+    "firebase_url": "https://clube7desbravadores-default-rtdb.firebaseio.com",
+    "project_id": "clube7desbravadores",
+    "storage_bucket": "clube7desbravadores.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028846139837:android:48cdc8fd4b05109a75bad4",
+        "android_client_info": {
+          "package_name": "com.adv7dev.eusoudesbravadores"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC42PHM1PSz8_9kl69uuCAFP_yR6meSips"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028846139837:android:bfc3e910fe7d373875bad4",
+        "android_client_info": {
+          "package_name": "com.mycompany.eusoudesbravadores"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC42PHM1PSz8_9kl69uuCAFP_yR6meSips"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
