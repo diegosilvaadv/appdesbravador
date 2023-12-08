@@ -516,7 +516,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                 FFButtonWidget(
                                                   onPressed: () async {
                                                     context.pushNamed(
-                                                      'auth_4_Login',
+                                                      'auth_4_Welcome',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
                                                             TransitionInfo(

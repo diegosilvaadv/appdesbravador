@@ -20,7 +20,7 @@ class Auth4LoginModel extends FlutterFlowModel<Auth4LoginWidget> {
   // State field(s) for phoneNumber widget.
   FocusNode? phoneNumberFocusNode;
   TextEditingController? phoneNumberController;
-  final phoneNumberMask = MaskTextInputFormatter(mask: '+1 (###) ###-####');
+  final phoneNumberMask = MaskTextInputFormatter(mask: '+55 (##) #####-####');
   String? Function(BuildContext, String?)? phoneNumberControllerValidator;
 
   /// Initialization and disposal methods.

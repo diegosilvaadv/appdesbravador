@@ -525,7 +525,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                                 FFButtonWidget(
                                                   onPressed: () async {
                                                     context.pushNamed(
-                                                      'auth_4_Login',
+                                                      'auth_4_Welcome',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
                                                             TransitionInfo(
