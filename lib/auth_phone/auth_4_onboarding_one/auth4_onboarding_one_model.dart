@@ -40,7 +40,7 @@ class Auth4OnboardingOneModel
   // State field(s) for phoneNumber widget.
   FocusNode? phoneNumberFocusNode;
   TextEditingController? phoneNumberController;
-  final phoneNumberMask = MaskTextInputFormatter(mask: '+1 (###) ###-####');
+  final phoneNumberMask = MaskTextInputFormatter(mask: '+55 (##) #####-####');
   String? Function(BuildContext, String?)? phoneNumberControllerValidator;
   // State field(s) for yourName widget.
   FocusNode? yourNameFocusNode1;
