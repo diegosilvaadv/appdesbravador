@@ -114,11 +114,11 @@ final parametersBuilderMap =
     <String, Future<ParameterData> Function(Map<String, dynamic>)>{
   'HomePage': ParameterData.none(),
   'especialidades': ParameterData.none(),
-  'Login': ParameterData.none(),
   'perfil': ParameterData.none(),
   'detalhesClubes': (data) async => ParameterData(
         allParams: {},
       ),
+  'Login': ParameterData.none(),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

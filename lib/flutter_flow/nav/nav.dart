@@ -101,11 +101,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => EspecialidadesWidget(),
         ),
         FFRoute(
-          name: 'Login',
-          path: '/login',
-          builder: (context, params) => LoginWidget(),
-        ),
-        FFRoute(
           name: 'perfil',
           path: '/perfil',
           builder: (context, params) => PerfilWidget(),
@@ -117,6 +112,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             detalhesClubes: params.getParam<ClubesRow>(
                 'detalhesClubes', ParamType.SupabaseRow),
           ),
+        ),
+        FFRoute(
+          name: 'Login',
+          path: '/login',
+          builder: (context, params) => LoginWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
