@@ -14,11 +14,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
-import 'auth4_onboarding_one_model.dart';
-export 'auth4_onboarding_one_model.dart';
+import 'criar_conta_email_model.dart';
+export 'criar_conta_email_model.dart';
 
-class Auth4OnboardingOneWidget extends StatefulWidget {
-  const Auth4OnboardingOneWidget({
+class CriarContaEmailWidget extends StatefulWidget {
+  const CriarContaEmailWidget({
     super.key,
     int? index,
   })  : index = index ?? 0;
@@ -26,13 +26,12 @@ class Auth4OnboardingOneWidget extends StatefulWidget {
   final int index;
 
   @override
-  _Auth4OnboardingOneWidgetState createState() =>
-      _Auth4OnboardingOneWidgetState();
+  _CriarContaEmailWidgetState createState() => _CriarContaEmailWidgetState();
 }
 
-class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
+class _CriarContaEmailWidgetState extends State<CriarContaEmailWidget>
     with TickerProviderStateMixin {
-  late Auth4OnboardingOneModel _model;
+  late CriarContaEmailModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -139,9 +138,10 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
         ),
       ],
     ),
-    'containerOnPageLoadAnimation1': AnimationInfo(
+    'textFieldOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
+        VisibilityEffect(duration: 300.ms),
         FadeEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
@@ -172,9 +172,10 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
         ),
       ],
     ),
-    'containerOnPageLoadAnimation2': AnimationInfo(
+    'textFieldOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
+        VisibilityEffect(duration: 300.ms),
         FadeEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
@@ -273,74 +274,6 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
         ),
       ],
     ),
-    'textFieldOnPageLoadAnimation2': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 300.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.0, 40.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.349, 0),
-          end: const Offset(0, 0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.9, 0.9),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
-    'textFieldOnPageLoadAnimation3': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 300.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.0, 40.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.349, 0),
-          end: const Offset(0, 0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.9, 0.9),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
     'textFieldOnPageLoadAnimation4': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
@@ -375,7 +308,75 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
         ),
       ],
     ),
-    'containerOnPageLoadAnimation3': AnimationInfo(
+    'textFieldOnPageLoadAnimation5': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        VisibilityEffect(duration: 300.ms),
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
+        ),
+        TiltEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
+        ),
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+    'textFieldOnPageLoadAnimation6': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        VisibilityEffect(duration: 300.ms),
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
+        ),
+        TiltEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
+        ),
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+    'containerOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         VisibilityEffect(duration: 300.ms),
@@ -477,7 +478,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
         ),
       ],
     ),
-    'containerOnPageLoadAnimation4': AnimationInfo(
+    'containerOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         VisibilityEffect(duration: 300.ms),
@@ -613,7 +614,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
         ),
       ],
     ),
-    'containerOnPageLoadAnimation5': AnimationInfo(
+    'containerOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         VisibilityEffect(duration: 300.ms),
@@ -715,7 +716,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
         ),
       ],
     ),
-    'containerOnPageLoadAnimation6': AnimationInfo(
+    'containerOnPageLoadAnimation4': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         VisibilityEffect(duration: 300.ms),
@@ -754,11 +755,17 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Auth4OnboardingOneModel());
+    _model = createModel(context, () => CriarContaEmailModel());
 
-    _model.phoneNumberController ??= TextEditingController();
-    _model.phoneNumberFocusNode ??= FocusNode();
-    _model.phoneNumberFocusNode!.addListener(() => setState(() {}));
+    _model.emailController ??= TextEditingController();
+    _model.emailFocusNode ??= FocusNode();
+    _model.emailFocusNode!.addListener(() => setState(() {}));
+    _model.senhaController ??= TextEditingController();
+    _model.senhaFocusNode ??= FocusNode();
+    _model.senhaFocusNode!.addListener(() => setState(() {}));
+    _model.confSenhaController ??= TextEditingController();
+    _model.confSenhaFocusNode ??= FocusNode();
+    _model.confSenhaFocusNode!.addListener(() => setState(() {}));
     _model.yourNameController1 ??= TextEditingController();
     _model.yourNameFocusNode1 ??= FocusNode();
 
@@ -767,8 +774,6 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
 
     _model.yourNameController2 ??= TextEditingController();
     _model.yourNameFocusNode2 ??= FocusNode();
-
-    authManager.handlePhoneAuthStateChanges(context);
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -871,10 +876,14 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 32.0, 0.0, 8.0),
                                           child: Text(
-                                            'Whats your digits?',
+                                            'Criar Conta',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
-                                                .displayMedium,
+                                                .displayMedium
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  fontSize: 35.0,
+                                                ),
                                           ).animateOnPageLoad(animationsMap[
                                               'textOnPageLoadAnimation1']!),
                                         ),
@@ -883,7 +892,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 8.0),
                                           child: Text(
-                                            'Enter your phone number in order to get started with your profile creation.',
+                                            'Digite seu e-mail e senha para continuar.',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .labelLarge,
@@ -895,19 +904,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 12.0, 0.0, 0.0),
                                           child: TextFormField(
-                                            controller:
-                                                _model.phoneNumberController,
-                                            focusNode:
-                                                _model.phoneNumberFocusNode,
+                                            controller: _model.emailController,
+                                            focusNode: _model.emailFocusNode,
                                             autofillHints: const [
-                                              AutofillHints.telephoneNumber
+                                              AutofillHints.email
                                             ],
                                             obscureText: false,
                                             decoration: InputDecoration(
-                                              labelText: 'Phone Number',
+                                              labelText: 'E-mail',
                                               labelStyle:
                                                   FlutterFlowTheme.of(context)
-                                                      .labelLarge,
+                                                      .labelLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        fontSize: 18.0,
+                                                      ),
                                               errorStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .labelSmall
@@ -927,11 +939,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   width: 2.0,
                                                 ),
                                                 borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
+                                                    BorderRadius.circular(8.0),
                                               ),
                                               focusedBorder:
                                                   UnderlineInputBorder(
@@ -942,11 +950,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   width: 2.0,
                                                 ),
                                                 borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
+                                                    BorderRadius.circular(8.0),
                                               ),
                                               errorBorder: UnderlineInputBorder(
                                                 borderSide: BorderSide(
@@ -956,11 +960,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   width: 2.0,
                                                 ),
                                                 borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
+                                                    BorderRadius.circular(8.0),
                                               ),
                                               focusedErrorBorder:
                                                   UnderlineInputBorder(
@@ -971,177 +971,287 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   width: 2.0,
                                                 ),
                                                 borderRadius:
-                                                    const BorderRadius.only(
-                                                  topLeft: Radius.circular(4.0),
-                                                  topRight:
-                                                      Radius.circular(4.0),
-                                                ),
+                                                    BorderRadius.circular(8.0),
                                               ),
                                               filled: true,
                                               fillColor:
                                                   FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
+                                                      .primaryBackground,
                                               contentPadding:
                                                   const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 16.0, 16.0, 8.0),
+                                                      .fromSTEB(16.0, 16.0,
+                                                          16.0, 8.0),
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  lineHeight: 3.0,
+                                                  fontSize: 18.0,
+                                                  lineHeight: 2.0,
                                                 ),
-                                            keyboardType: TextInputType.phone,
+                                            keyboardType:
+                                                TextInputType.emailAddress,
                                             cursorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .primary,
                                             validator: _model
-                                                .phoneNumberControllerValidator
+                                                .emailControllerValidator
                                                 .asValidator(context),
-                                            inputFormatters: [
-                                              _model.phoneNumberMask
-                                            ],
                                           ).animateOnPageLoad(animationsMap[
                                               'textFieldOnPageLoadAnimation1']!),
                                         ),
-                                        if ((_model.phoneNumberFocusNode
-                                                ?.hasFocus ??
-                                            false))
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 24.0, 0.0, 0.0),
-                                            child: Container(
-                                              width: double.infinity,
-                                              constraints: const BoxConstraints(
-                                                maxWidth: 600.0,
-                                              ),
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .accent2,
-                                                borderRadius:
-                                                    BorderRadius.circular(12.0),
-                                                border: Border.all(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondary,
-                                                  width: 2.0,
-                                                ),
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 12.0, 12.0, 12.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      'We\'ll send a 6 digit code to you!',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                          ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  4.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        'You will be done in no time, keep up the great work!',
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelSmall,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ).animateOnPageLoad(animationsMap[
-                                                'containerOnPageLoadAnimation1']!),
-                                          ),
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 16.0, 0.0, 0.0),
-                                          child: AnimatedContainer(
-                                            duration:
-                                                const Duration(milliseconds: 150),
-                                            curve: Curves.easeInOut,
-                                            width: double.infinity,
-                                            decoration: BoxDecoration(
-                                              color:
+                                                  0.0, 12.0, 0.0, 0.0),
+                                          child: TextFormField(
+                                            controller: _model.senhaController,
+                                            focusNode: _model.senhaFocusNode,
+                                            autofillHints: const [
+                                              AutofillHints.password
+                                            ],
+                                            obscureText:
+                                                !_model.senhaVisibility,
+                                            decoration: InputDecoration(
+                                              labelText: 'Criar Senha',
+                                              labelStyle:
                                                   FlutterFlowTheme.of(context)
-                                                      .accent3,
-                                              borderRadius:
-                                                  BorderRadius.circular(12.0),
-                                              border: Border.all(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .tertiary,
-                                                width: 2.0,
-                                              ),
-                                            ),
-                                            child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      12.0, 12.0, 12.0, 12.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    'Developer Note (delete this)',
-                                                    style: FlutterFlowTheme.of(
+                                                      .labelLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        fontSize: 18.0,
+                                                      ),
+                                              errorStyle: FlutterFlowTheme.of(
+                                                      context)
+                                                  .labelSmall
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    color: FlutterFlowTheme.of(
                                                             context)
-                                                        .bodyLarge
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
+                                                        .error,
+                                                    lineHeight: 3.0,
                                                   ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 4.0,
-                                                                0.0, 0.0),
-                                                    child: Text(
-                                                      'In order for phone sign in to work, you must enable it in Firestore Authentication tab and make sure you have a Blaze Plan on Firbase, and add app.flutterflow.io to your associated domains. After enabling those you should be able to sign in.',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .labelSmall,
-                                                    ),
-                                                  ),
-                                                ],
+                                              enabledBorder:
+                                                  UnderlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate,
+                                                  width: 2.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                              focusedBorder:
+                                                  UnderlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                  width: 2.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                              errorBorder: UnderlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .error,
+                                                  width: 2.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                              focusedErrorBorder:
+                                                  UnderlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .error,
+                                                  width: 2.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                              filled: true,
+                                              fillColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryBackground,
+                                              contentPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(16.0, 16.0,
+                                                          16.0, 8.0),
+                                              suffixIcon: InkWell(
+                                                onTap: () => setState(
+                                                  () => _model.senhaVisibility =
+                                                      !_model.senhaVisibility,
+                                                ),
+                                                focusNode: FocusNode(
+                                                    skipTraversal: true),
+                                                child: Icon(
+                                                  _model.senhaVisibility
+                                                      ? Icons
+                                                          .visibility_outlined
+                                                      : Icons
+                                                          .visibility_off_outlined,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  size: 20.0,
+                                                ),
                                               ),
                                             ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  fontSize: 18.0,
+                                                  lineHeight: 2.0,
+                                                ),
+                                            keyboardType:
+                                                TextInputType.visiblePassword,
+                                            cursorColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primary,
+                                            validator: _model
+                                                .senhaControllerValidator
+                                                .asValidator(context),
                                           ).animateOnPageLoad(animationsMap[
-                                              'containerOnPageLoadAnimation2']!),
+                                              'textFieldOnPageLoadAnimation2']!),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 12.0, 0.0, 0.0),
+                                          child: TextFormField(
+                                            controller:
+                                                _model.confSenhaController,
+                                            focusNode:
+                                                _model.confSenhaFocusNode,
+                                            autofillHints: const [
+                                              AutofillHints.password
+                                            ],
+                                            obscureText:
+                                                !_model.confSenhaVisibility,
+                                            decoration: InputDecoration(
+                                              labelText: 'Confirmar Senha',
+                                              labelStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        fontSize: 18.0,
+                                                      ),
+                                              errorStyle: FlutterFlowTheme.of(
+                                                      context)
+                                                  .labelSmall
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .error,
+                                                    lineHeight: 3.0,
+                                                  ),
+                                              enabledBorder:
+                                                  UnderlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate,
+                                                  width: 2.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                              focusedBorder:
+                                                  UnderlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                  width: 2.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                              errorBorder: UnderlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .error,
+                                                  width: 2.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                              focusedErrorBorder:
+                                                  UnderlineInputBorder(
+                                                borderSide: BorderSide(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .error,
+                                                  width: 2.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                              filled: true,
+                                              fillColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryBackground,
+                                              contentPadding:
+                                                  const EdgeInsetsDirectional
+                                                      .fromSTEB(16.0, 16.0,
+                                                          16.0, 8.0),
+                                              suffixIcon: InkWell(
+                                                onTap: () => setState(
+                                                  () => _model
+                                                          .confSenhaVisibility =
+                                                      !_model
+                                                          .confSenhaVisibility,
+                                                ),
+                                                focusNode: FocusNode(
+                                                    skipTraversal: true),
+                                                child: Icon(
+                                                  _model.confSenhaVisibility
+                                                      ? Icons
+                                                          .visibility_outlined
+                                                      : Icons
+                                                          .visibility_off_outlined,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  size: 20.0,
+                                                ),
+                                              ),
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  fontSize: 18.0,
+                                                  lineHeight: 2.0,
+                                                ),
+                                            keyboardType:
+                                                TextInputType.visiblePassword,
+                                            cursorColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primary,
+                                            validator: _model
+                                                .confSenhaControllerValidator
+                                                .asValidator(context),
+                                          ).animateOnPageLoad(animationsMap[
+                                              'textFieldOnPageLoadAnimation3']!),
                                         ),
                                       ],
                                     ),
                                   ),
                                 ),
                                 Form(
-                                  key: _model.formKey3,
+                                  key: _model.formKey2,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1157,11 +1267,15 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 32.0, 0.0, 8.0),
                                             child: Text(
-                                              'What\'s your name?',
+                                              'Como podemos\n lhe chamar?',
                                               textAlign: TextAlign.start,
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .displayMedium,
+                                                      .displayMedium
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        fontSize: 35.0,
+                                                      ),
                                             ).animateOnPageLoad(animationsMap[
                                                 'textOnPageLoadAnimation3']!),
                                           ),
@@ -1170,7 +1284,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 8.0),
                                             child: Text(
-                                              'Enter a name that people would recognize so your friends can find you.',
+                                              'Preencha as informações abaixo para continuar.',
                                               textAlign: TextAlign.start,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -1192,7 +1306,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                               ],
                                               obscureText: false,
                                               decoration: InputDecoration(
-                                                labelText: 'Your Name...',
+                                                labelText: 'Seu Nome',
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelLarge,
@@ -1286,7 +1400,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                       .override(
                                                         fontFamily:
                                                             'Readex Pro',
-                                                        lineHeight: 3.0,
+                                                        lineHeight: 2.0,
                                                       ),
                                               keyboardType: TextInputType.name,
                                               cursorColor:
@@ -1296,7 +1410,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   .yourNameController1Validator
                                                   .asValidator(context),
                                             ).animateOnPageLoad(animationsMap[
-                                                'textFieldOnPageLoadAnimation2']!),
+                                                'textFieldOnPageLoadAnimation4']!),
                                           ),
                                           Padding(
                                             padding:
@@ -1314,11 +1428,11 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   TextCapitalization.none,
                                               obscureText: false,
                                               decoration: InputDecoration(
-                                                labelText: 'Username',
+                                                labelText: 'Nome de usuário',
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelLarge,
-                                                hintText: '@fluffyfreddy',
+                                                hintText: '@eusoudesbravador',
                                                 hintStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelLarge
@@ -1417,7 +1531,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                       .override(
                                                         fontFamily:
                                                             'Readex Pro',
-                                                        lineHeight: 3.0,
+                                                        lineHeight: 2.0,
                                                       ),
                                               keyboardType: TextInputType.name,
                                               cursorColor:
@@ -1427,7 +1541,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   .usernameControllerValidator
                                                   .asValidator(context),
                                             ).animateOnPageLoad(animationsMap[
-                                                'textFieldOnPageLoadAnimation3']!),
+                                                'textFieldOnPageLoadAnimation5']!),
                                           ),
                                           Padding(
                                             padding:
@@ -1447,7 +1561,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                     FlutterFlowTheme.of(context)
                                                         .labelLarge,
                                                 hintText:
-                                                    'Short description...',
+                                                    'Fale um pouco sobre você!',
                                                 hintStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelLarge
@@ -1558,7 +1672,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   .yourNameController2Validator
                                                   .asValidator(context),
                                             ).animateOnPageLoad(animationsMap[
-                                                'textFieldOnPageLoadAnimation4']!),
+                                                'textFieldOnPageLoadAnimation6']!),
                                           ),
                                           Padding(
                                             padding:
@@ -1593,7 +1707,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'Congrats! Your account is created!',
+                                                      'Parabéns! Sua conta está criada!',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .bodyLarge
@@ -1613,7 +1727,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'Just a few more steps and we\'ll have you onboarded!',
+                                                        'Apenas mais alguns passos para você ser um #DesbradorSocialMidia',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1624,7 +1738,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 ),
                                               ),
                                             ).animateOnPageLoad(animationsMap[
-                                                'containerOnPageLoadAnimation3']!),
+                                                'containerOnPageLoadAnimation1']!),
                                           ),
                                         ],
                                       ),
@@ -1632,7 +1746,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   ),
                                 ),
                                 Form(
-                                  key: _model.formKey1,
+                                  key: _model.formKey3,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1648,11 +1762,15 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 32.0, 0.0, 8.0),
                                             child: Text(
-                                              'Upload your face',
+                                              'Sua Foto de Perfil',
                                               textAlign: TextAlign.start,
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .displayMedium,
+                                                      .displayMedium
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        fontSize: 35.0,
+                                                      ),
                                             ).animateOnPageLoad(animationsMap[
                                                 'textOnPageLoadAnimation5']!),
                                           ),
@@ -1661,7 +1779,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 8.0),
                                             child: Text(
-                                              'Enter a name that people would recognize so your friends can find you.',
+                                              'Faça upload daquela melhor foto de desbravador(a).',
                                               textAlign: TextAlign.start,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -1774,7 +1892,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   ),
                                                 ),
                                               ).animateOnPageLoad(animationsMap[
-                                                  'containerOnPageLoadAnimation4']!),
+                                                  'containerOnPageLoadAnimation2']!),
                                             ),
                                           ),
                                           Align(
@@ -1885,7 +2003,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                     }
                                                   }
                                                 },
-                                                text: 'Upload Image',
+                                                text: 'Carregar Foto',
                                                 options: FFButtonOptions(
                                                   height: 44.0,
                                                   padding: const EdgeInsetsDirectional
@@ -1938,7 +2056,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   ),
                                 ),
                                 Form(
-                                  key: _model.formKey2,
+                                  key: _model.formKey1,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1954,11 +2072,15 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 32.0, 0.0, 8.0),
                                             child: Text(
-                                              'How old are you?',
+                                              'Quantos anos de desbravador?',
                                               textAlign: TextAlign.start,
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .displayMedium,
+                                                      .displayMedium
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        fontSize: 35.0,
+                                                      ),
                                             ).animateOnPageLoad(animationsMap[
                                                 'textOnPageLoadAnimation7']!),
                                           ),
@@ -1967,7 +2089,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 8.0),
                                             child: Text(
-                                              'Let us know how old you are in order to continue.',
+                                              'Desde o dia que recebou o lenço!',
                                               textAlign: TextAlign.start,
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -2074,7 +2196,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                     if (_model.datePicked ==
                                                         null)
                                                       Text(
-                                                        'Date of Birth',
+                                                        'Data do Lenço',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -2085,11 +2207,13 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
+                                                                  fontSize:
+                                                                      35.0,
                                                                 ),
                                                       ),
                                                     Text(
                                                       dateTimeFormat(
-                                                        'yMd',
+                                                        'dd/MM/yyyy',
                                                         _model.datePicked,
                                                         locale:
                                                             FFLocalizations.of(
@@ -2099,14 +2223,19 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .displayMedium,
+                                                              .displayMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Outfit',
+                                                                fontSize: 35.0,
+                                                              ),
                                                     ),
                                                   ],
                                                 ),
                                               ),
                                             ),
                                           ).animateOnPageLoad(animationsMap[
-                                              'containerOnPageLoadAnimation5']!),
+                                              'containerOnPageLoadAnimation3']!),
                                         ],
                                       ),
                                     ),
@@ -2126,7 +2255,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 32.0, 0.0, 8.0),
                                           child: Text(
-                                            'Your profile!',
+                                            'Seu Perfil!',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .displayMedium,
@@ -2138,7 +2267,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 8.0),
                                           child: Text(
-                                            'Congrats, you made it! We can\'t wait for you to get started!',
+                                            'Parabéns seu perfil está completo!\nAgora você é um #desbravodorSocialMidia',
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .labelLarge,
@@ -2191,7 +2320,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 ),
                                               ),
                                             ).animateOnPageLoad(animationsMap[
-                                                'containerOnPageLoadAnimation6']!),
+                                                'containerOnPageLoadAnimation4']!),
                                           ),
                                         ),
                                         Padding(
@@ -2199,7 +2328,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Text(
-                                            'Your name',
+                                            'Seu Nome',
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium,
                                           ),
@@ -2217,7 +2346,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 8.0, 0.0, 0.0),
+                                                  0.0, 10.0, 0.0, 0.0),
                                           child: Text(
                                             'Username',
                                             style: FlutterFlowTheme.of(context)
@@ -2227,7 +2356,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 8.0, 0.0, 0.0),
+                                                  0.0, 6.0, 0.0, 0.0),
                                           child: Text(
                                             _model.usernameController.text,
                                             style: FlutterFlowTheme.of(context)
@@ -2243,9 +2372,9 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 8.0, 0.0, 0.0),
+                                                  0.0, 10.0, 0.0, 0.0),
                                           child: Text(
-                                            'Your Bio',
+                                            'Sobre Você',
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium,
                                           ),
@@ -2253,7 +2382,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 12.0, 0.0, 0.0),
+                                                  0.0, 6.0, 0.0, 0.0),
                                           child: Text(
                                             valueOrDefault<String>(
                                               _model.yourNameController2.text,
@@ -2266,9 +2395,9 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 8.0, 0.0, 0.0),
+                                                  0.0, 10.0, 0.0, 0.0),
                                           child: Text(
-                                            'Date of Birth',
+                                            'Data do seu lenço',
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium,
                                           ),
@@ -2279,7 +2408,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
                                             dateTimeFormat(
-                                              'yMMMd',
+                                              'dd/MM/yyyy',
                                               _model.datePicked,
                                               locale:
                                                   FFLocalizations.of(context)
@@ -2360,7 +2489,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                       curve: Curves.ease,
                                     );
                                   },
-                                  text: 'Back',
+                                  text: 'Voltar',
                                   options: FFButtonOptions(
                                     height: 52.0,
                                     padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2402,42 +2531,14 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                           child: FFButtonWidget(
                             onPressed: () async {
                               if (_model.pageViewCurrentIndex == 0) {
-                                final phoneNumberVal =
-                                    _model.phoneNumberController.text;
-                                if (phoneNumberVal.isEmpty ||
-                                    !phoneNumberVal.startsWith('+')) {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                      content: Text(
-                                          'Phone Number is required and has to start with +.'),
-                                    ),
-                                  );
-                                  return;
-                                }
-                                await authManager.beginPhoneAuth(
-                                  context: context,
-                                  phoneNumber: phoneNumberVal,
-                                  onCodeSent: (context) async {
-                                    context.goNamedAuth(
-                                      'auth_4_OnboardingPhoneVerify',
-                                      context.mounted,
-                                      queryParameters: {
-                                        'phoneNumber': serializeParam(
-                                          _model.phoneNumberController.text,
-                                          ParamType.String,
-                                        ),
-                                        'isLogin': serializeParam(
-                                          false,
-                                          ParamType.bool,
-                                        ),
-                                      }.withoutNulls,
-                                      ignoreRedirect: true,
-                                    );
-                                  },
+                                // controlPageView
+                                await _model.pageViewController?.nextPage(
+                                  duration: const Duration(milliseconds: 300),
+                                  curve: Curves.ease,
                                 );
                               } else if (_model.pageViewCurrentIndex == 1) {
-                                if (_model.formKey3.currentState == null ||
-                                    !_model.formKey3.currentState!.validate()) {
+                                if (_model.formKey2.currentState == null ||
+                                    !_model.formKey2.currentState!.validate()) {
                                   return;
                                 }
                                 // controlPageView
@@ -2446,15 +2547,15 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   curve: Curves.ease,
                                 );
                               } else if (_model.pageViewCurrentIndex == 2) {
-                                if (_model.formKey1.currentState == null ||
-                                    !_model.formKey1.currentState!.validate()) {
+                                if (_model.formKey3.currentState == null ||
+                                    !_model.formKey3.currentState!.validate()) {
                                   return;
                                 }
                                 if (_model.uploadedFileUrl.isEmpty) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
-                                        'Please upload an image to continue',
+                                        'Por favor carregue uma imagem para continuar',
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -2477,8 +2578,8 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   curve: Curves.ease,
                                 );
                               } else if (_model.pageViewCurrentIndex == 3) {
-                                if (_model.formKey2.currentState == null ||
-                                    !_model.formKey2.currentState!.validate()) {
+                                if (_model.formKey1.currentState == null ||
+                                    !_model.formKey1.currentState!.validate()) {
                                   return;
                                 }
                                 if (_model.datePicked == null) {
@@ -2487,7 +2588,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
-                                        'Please add your date of birth!',
+                                        'Por favor, adicione o dia que recebeu o lenço!',
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -2510,21 +2611,50 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   curve: Curves.ease,
                                 );
                               } else {
-                                await currentUserReference!
+                                GoRouter.of(context).prepareAuthEvent();
+                                if (_model.senhaController.text !=
+                                    _model.confSenhaController.text) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text(
+                                        'Passwords don\'t match!',
+                                      ),
+                                    ),
+                                  );
+                                  return;
+                                }
+
+                                final user =
+                                    await authManager.createAccountWithEmail(
+                                  context,
+                                  _model.emailController.text,
+                                  _model.senhaController.text,
+                                );
+                                if (user == null) {
+                                  return;
+                                }
+
+                                await UsersRecord.collection
+                                    .doc(user.uid)
                                     .update(createUsersRecordData(
-                                  displayName: _model.yourNameController1.text,
-                                  photoUrl: _model.uploadedFileUrl,
-                                  lastActiveTime: getCurrentTimestamp,
-                                  phoneNumber:
-                                      _model.phoneNumberController.text,
-                                  shortDescription:
-                                      _model.yourNameController2.text,
-                                  title: _model.usernameController.text,
-                                ));
+                                      displayName:
+                                          _model.yourNameController1.text,
+                                      createdTime: getCurrentTimestamp,
+                                      email: _model.emailController.text,
+                                      creatPerfil: getCurrentTimestamp,
+                                      especConcluidas: 0,
+                                      photoUrl: _model.uploadedFileUrl,
+                                      datadeInicioLenco: _model.datePicked,
+                                      meuClube: 'Sem clube',
+                                      sobrevoce:
+                                          _model.yourNameController2.text,
+                                      title: _model.usernameController.text,
+                                    ));
+
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      'Your profile has been completed!',
+                                      'Seu perfil foi concluído!',
                                       style: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -2539,8 +2669,9 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   ),
                                 );
 
-                                context.goNamed(
+                                context.goNamedAuth(
                                   'HomePage',
+                                  context.mounted,
                                   extra: <String, dynamic>{
                                     kTransitionInfoKey: const TransitionInfo(
                                       hasTransition: true,
@@ -2551,8 +2682,8 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                               }
                             },
                             text: _model.pageViewCurrentIndex == 4
-                                ? 'Save & Complete'
-                                : 'Next',
+                                ? 'Salvar e Concluir'
+                                : 'Próximo',
                             options: FFButtonOptions(
                               height: 52.0,
                               padding: const EdgeInsetsDirectional.fromSTEB(

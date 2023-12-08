@@ -113,20 +113,25 @@ final parametersBuilderMap =
   'detalhesClubes': (data) async => const ParameterData(
         allParams: {},
       ),
-  'auth_4_OnboardingOne': (data) async => ParameterData(
+  'CriarContaCell': (data) async => ParameterData(
         allParams: {
           'index': getParameter<int>(data, 'index'),
         },
       ),
   'criarconta': ParameterData.none(),
-  'auth_4_OnboardingPhoneVerify': (data) async => ParameterData(
+  'PhoneVerify': (data) async => ParameterData(
         allParams: {
           'phoneNumber': getParameter<String>(data, 'phoneNumber'),
           'isLogin': getParameter<bool>(data, 'isLogin'),
         },
       ),
-  'auth_4_Login': ParameterData.none(),
+  'EntrarComCell': ParameterData.none(),
   'login': ParameterData.none(),
+  'CriarContaEmail': (data) async => ParameterData(
+        allParams: {
+          'index': getParameter<int>(data, 'index'),
+        },
+      ),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

@@ -8,19 +8,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
-import 'auth4_login_model.dart';
-export 'auth4_login_model.dart';
+import 'entrar_com_cell_model.dart';
+export 'entrar_com_cell_model.dart';
 
-class Auth4LoginWidget extends StatefulWidget {
-  const Auth4LoginWidget({super.key});
+class EntrarComCellWidget extends StatefulWidget {
+  const EntrarComCellWidget({super.key});
 
   @override
-  _Auth4LoginWidgetState createState() => _Auth4LoginWidgetState();
+  _EntrarComCellWidgetState createState() => _EntrarComCellWidgetState();
 }
 
-class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
+class _EntrarComCellWidgetState extends State<EntrarComCellWidget>
     with TickerProviderStateMixin {
-  late Auth4LoginModel _model;
+  late EntrarComCellModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -132,7 +132,7 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Auth4LoginModel());
+    _model = createModel(context, () => EntrarComCellModel());
 
     _model.phoneNumberController ??= TextEditingController();
     _model.phoneNumberFocusNode ??= FocusNode();
@@ -218,9 +218,14 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 32.0, 0.0, 8.0),
                             child: Text(
-                              'Login with phone',
+                              'Entrar com Celular',
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).displayMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .displayMedium
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    fontSize: 35.0,
+                                  ),
                             ).animateOnPageLoad(
                                 animationsMap['textOnPageLoadAnimation1']!),
                           ),
@@ -228,7 +233,7 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 8.0),
                             child: Text(
-                              'Enter your phone number in order to get started with your profile creation.',
+                              'Digite o número de celular para entrar na sua conta.',
                               textAlign: TextAlign.start,
                               style: FlutterFlowTheme.of(context).labelLarge,
                             ).animateOnPageLoad(
@@ -243,7 +248,7 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                               autofillHints: const [AutofillHints.telephoneNumber],
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Phone Number',
+                                labelText: 'Número do Celular',
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelLarge,
                                 errorStyle: FlutterFlowTheme.of(context)
@@ -259,52 +264,40 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                                         FlutterFlowTheme.of(context).alternate,
                                     width: 2.0,
                                   ),
-                                  borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(4.0),
-                                    topRight: Radius.circular(4.0),
-                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 focusedBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).primary,
                                     width: 2.0,
                                   ),
-                                  borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(4.0),
-                                    topRight: Radius.circular(4.0),
-                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 errorBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
                                     width: 2.0,
                                   ),
-                                  borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(4.0),
-                                    topRight: Radius.circular(4.0),
-                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 focusedErrorBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context).error,
                                     width: 2.0,
                                   ),
-                                  borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(4.0),
-                                    topRight: Radius.circular(4.0),
-                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 filled: true,
-                                fillColor: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                                fillColor:
+                                    FlutterFlowTheme.of(context).alternate,
                                 contentPadding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 16.0, 16.0, 8.0),
+                                    16.0, 16.0, 16.0, 8.0),
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    lineHeight: 3.0,
+                                    lineHeight: 2.0,
                                   ),
                               keyboardType: TextInputType.phone,
                               cursorColor: FlutterFlowTheme.of(context).primary,
@@ -344,7 +337,7 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                               phoneNumber: phoneNumberVal,
                               onCodeSent: (context) async {
                                 context.goNamedAuth(
-                                  'auth_4_OnboardingPhoneVerify',
+                                  'PhoneVerify',
                                   context.mounted,
                                   queryParameters: {
                                     'phoneNumber': serializeParam(
@@ -361,7 +354,7 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                               },
                             );
                           },
-                          text: 'Send Code',
+                          text: 'Enviar Código',
                           options: FFButtonOptions(
                             height: 52.0,
                             padding: const EdgeInsetsDirectional.fromSTEB(

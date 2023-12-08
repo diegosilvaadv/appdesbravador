@@ -1,9 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'auth4_login_widget.dart' show Auth4LoginWidget;
+import 'entrar_com_cell_widget.dart' show EntrarComCellWidget;
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
-class Auth4LoginModel extends FlutterFlowModel<Auth4LoginWidget> {
+class EntrarComCellModel extends FlutterFlowModel<EntrarComCellWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

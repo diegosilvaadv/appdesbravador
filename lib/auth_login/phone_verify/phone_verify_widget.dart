@@ -9,11 +9,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
-import 'auth4_onboarding_phone_verify_model.dart';
-export 'auth4_onboarding_phone_verify_model.dart';
+import 'phone_verify_model.dart';
+export 'phone_verify_model.dart';
 
-class Auth4OnboardingPhoneVerifyWidget extends StatefulWidget {
-  const Auth4OnboardingPhoneVerifyWidget({
+class PhoneVerifyWidget extends StatefulWidget {
+  const PhoneVerifyWidget({
     super.key,
     this.phoneNumber,
     bool? isLogin,
@@ -23,14 +23,12 @@ class Auth4OnboardingPhoneVerifyWidget extends StatefulWidget {
   final bool isLogin;
 
   @override
-  _Auth4OnboardingPhoneVerifyWidgetState createState() =>
-      _Auth4OnboardingPhoneVerifyWidgetState();
+  _PhoneVerifyWidgetState createState() => _PhoneVerifyWidgetState();
 }
 
-class _Auth4OnboardingPhoneVerifyWidgetState
-    extends State<Auth4OnboardingPhoneVerifyWidget>
+class _PhoneVerifyWidgetState extends State<PhoneVerifyWidget>
     with TickerProviderStateMixin {
-  late Auth4OnboardingPhoneVerifyModel _model;
+  late PhoneVerifyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -74,7 +72,7 @@ class _Auth4OnboardingPhoneVerifyWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Auth4OnboardingPhoneVerifyModel());
+    _model = createModel(context, () => PhoneVerifyModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -155,9 +153,14 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 32.0, 0.0, 8.0),
                             child: Text(
-                              'Verify Code',
+                              'Código de verificação',
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).displayMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .displayMedium
+                                  .override(
+                                    fontFamily: 'Outfit',
+                                    fontSize: 30.0,
+                                  ),
                             ).animateOnPageLoad(
                                 animationsMap['textOnPageLoadAnimation']!),
                           ),
@@ -171,7 +174,7 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                                 children: [
                                   const TextSpan(
                                     text:
-                                        'Enter the 6 digit code we sent to the number below: ',
+                                        'Digite o código de 6 dígitos que enviamos para o número abaixo:',
                                     style: TextStyle(),
                                   ),
                                   TextSpan(
@@ -306,7 +309,7 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                               }
 
                               context.goNamedAuth(
-                                'auth_4_OnboardingOne',
+                                'CriarContaCell',
                                 context.mounted,
                                 queryParameters: {
                                   'index': serializeParam(
@@ -325,7 +328,7 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                               );
                             }
                           },
-                          text: 'Verify Code',
+                          text: 'Verificar Código',
                           options: FFButtonOptions(
                             height: 52.0,
                             padding: const EdgeInsetsDirectional.fromSTEB(

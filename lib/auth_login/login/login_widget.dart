@@ -11,19 +11,19 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
-import 'criarconta_model.dart';
-export 'criarconta_model.dart';
+import 'login_model.dart';
+export 'login_model.dart';
 
-class CriarcontaWidget extends StatefulWidget {
-  const CriarcontaWidget({super.key});
+class LoginWidget extends StatefulWidget {
+  const LoginWidget({super.key});
 
   @override
-  _CriarcontaWidgetState createState() => _CriarcontaWidgetState();
+  _LoginWidgetState createState() => _LoginWidgetState();
 }
 
-class _CriarcontaWidgetState extends State<CriarcontaWidget>
+class _LoginWidgetState extends State<LoginWidget>
     with TickerProviderStateMixin {
-  late CriarcontaModel _model;
+  late LoginModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -289,7 +289,7 @@ class _CriarcontaWidgetState extends State<CriarcontaWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CriarcontaModel());
+    _model = createModel(context, () => LoginModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -464,16 +464,16 @@ class _CriarcontaWidgetState extends State<CriarcontaWidget>
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'auth_4_OnboardingOne',
-                              queryParameters: {
-                                'index': serializeParam(
-                                  0,
-                                  ParamType.int,
+                              'EntrarComCell',
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: const TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType: PageTransitionType.fade,
                                 ),
-                              }.withoutNulls,
+                              },
                             );
                           },
-                          text: 'Criar Conta com Celular',
+                          text: 'Entrar com Celular',
                           icon: Icon(
                             Icons.phone,
                             color: FlutterFlowTheme.of(context)
@@ -533,7 +533,7 @@ class _CriarcontaWidgetState extends State<CriarcontaWidget>
 
                             context.goNamedAuth('HomePage', context.mounted);
                           },
-                          text: 'Criar com  Google',
+                          text: 'Entrar com  Google',
                           icon: FaIcon(
                             FontAwesomeIcons.google,
                             color: FlutterFlowTheme.of(context).primaryText,
@@ -579,7 +579,7 @@ class _CriarcontaWidgetState extends State<CriarcontaWidget>
 
                             context.goNamedAuth('HomePage', context.mounted);
                           },
-                          text: 'Criar com E-mail',
+                          text: 'Entrar com E-mail',
                           icon: Icon(
                             Icons.email,
                             color: FlutterFlowTheme.of(context).primaryText,
@@ -621,7 +621,7 @@ class _CriarcontaWidgetState extends State<CriarcontaWidget>
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
-                              'login',
+                              'criarconta',
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: const TransitionInfo(
                                   hasTransition: true,

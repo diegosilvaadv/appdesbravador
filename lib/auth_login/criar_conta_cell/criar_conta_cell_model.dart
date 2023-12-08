@@ -1,10 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'auth4_onboarding_one_widget.dart' show Auth4OnboardingOneWidget;
+import 'criar_conta_cell_widget.dart' show CriarContaCellWidget;
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
-class Auth4OnboardingOneModel
-    extends FlutterFlowModel<Auth4OnboardingOneWidget> {
+class CriarContaCellModel extends FlutterFlowModel<CriarContaCellWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -30,7 +29,7 @@ class Auth4OnboardingOneModel
   String? Function(BuildContext, String?)? yourNameController1Validator;
   String? _yourNameController1Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
-      return 'Please enter your name to continue';
+      return 'Por favor digite seu nome para continuar';
     }
 
     return null;

@@ -594,7 +594,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           .clearRedirectLocation();
 
                                       context.goNamedAuth(
-                                        'auth_4_Login',
+                                        'EntrarComCell',
                                         context.mounted,
                                         extra: <String, dynamic>{
                                           kTransitionInfoKey: const TransitionInfo(

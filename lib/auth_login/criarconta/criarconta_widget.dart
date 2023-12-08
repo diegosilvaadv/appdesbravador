@@ -11,19 +11,19 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
-import 'login_model.dart';
-export 'login_model.dart';
+import 'criarconta_model.dart';
+export 'criarconta_model.dart';
 
-class LoginWidget extends StatefulWidget {
-  const LoginWidget({super.key});
+class CriarcontaWidget extends StatefulWidget {
+  const CriarcontaWidget({super.key});
 
   @override
-  _LoginWidgetState createState() => _LoginWidgetState();
+  _CriarcontaWidgetState createState() => _CriarcontaWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget>
+class _CriarcontaWidgetState extends State<CriarcontaWidget>
     with TickerProviderStateMixin {
-  late LoginModel _model;
+  late CriarcontaModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -289,7 +289,7 @@ class _LoginWidgetState extends State<LoginWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => LoginModel());
+    _model = createModel(context, () => CriarcontaModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -464,7 +464,7 @@ class _LoginWidgetState extends State<LoginWidget>
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed(
-                              'auth_4_OnboardingOne',
+                              'CriarContaCell',
                               queryParameters: {
                                 'index': serializeParam(
                                   0,
@@ -473,7 +473,7 @@ class _LoginWidgetState extends State<LoginWidget>
                               }.withoutNulls,
                             );
                           },
-                          text: 'Entrar com Celular',
+                          text: 'Criar Conta com Celular',
                           icon: Icon(
                             Icons.phone,
                             color: FlutterFlowTheme.of(context)
@@ -530,10 +530,16 @@ class _LoginWidgetState extends State<LoginWidget>
                             if (user == null) {
                               return;
                             }
-
-                            context.goNamedAuth('HomePage', context.mounted);
+                            if (valueOrDefault(
+                                    currentUserDocument?.meuClube, '') !=
+                                '') {
+                              context.pushNamedAuth(
+                                  'criarconta', context.mounted);
+                            } else {
+                              context.goNamedAuth('HomePage', context.mounted);
+                            }
                           },
-                          text: 'Entrar com  Google',
+                          text: 'Criar com  Google',
                           icon: FaIcon(
                             FontAwesomeIcons.google,
                             color: FlutterFlowTheme.of(context).primaryText,
@@ -570,16 +576,23 @@ class _LoginWidgetState extends State<LoginWidget>
                             20.0, 12.0, 20.0, 12.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            GoRouter.of(context).prepareAuthEvent();
-                            final user =
-                                await authManager.signInWithGoogle(context);
-                            if (user == null) {
-                              return;
-                            }
-
-                            context.goNamedAuth('HomePage', context.mounted);
+                            context.pushNamed(
+                              'CriarContaEmail',
+                              queryParameters: {
+                                'index': serializeParam(
+                                  0,
+                                  ParamType.int,
+                                ),
+                              }.withoutNulls,
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: const TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType: PageTransitionType.fade,
+                                ),
+                              },
+                            );
                           },
-                          text: 'Entrar com E-mail',
+                          text: 'Criar com E-mail',
                           icon: Icon(
                             Icons.email,
                             color: FlutterFlowTheme.of(context).primaryText,
@@ -621,7 +634,7 @@ class _LoginWidgetState extends State<LoginWidget>
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
-                              'criarconta',
+                              'login',
                               extra: <String, dynamic>{
                                 kTransitionInfoKey: const TransitionInfo(
                                   hasTransition: true,

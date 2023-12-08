@@ -107,9 +107,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'auth_4_OnboardingOne',
-          path: '/auth4OnboardingOne',
-          builder: (context, params) => Auth4OnboardingOneWidget(
+          name: 'CriarContaCell',
+          path: '/criarContaCell',
+          builder: (context, params) => CriarContaCellWidget(
             index: params.getParam('index', ParamType.int),
           ),
         ),
@@ -119,22 +119,29 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const CriarcontaWidget(),
         ),
         FFRoute(
-          name: 'auth_4_OnboardingPhoneVerify',
-          path: '/auth4OnboardingPhoneVerify',
-          builder: (context, params) => Auth4OnboardingPhoneVerifyWidget(
+          name: 'PhoneVerify',
+          path: '/phoneVerify',
+          builder: (context, params) => PhoneVerifyWidget(
             phoneNumber: params.getParam('phoneNumber', ParamType.String),
             isLogin: params.getParam('isLogin', ParamType.bool),
           ),
         ),
         FFRoute(
-          name: 'auth_4_Login',
-          path: '/auth4Login',
-          builder: (context, params) => const Auth4LoginWidget(),
+          name: 'EntrarComCell',
+          path: '/entrarComCell',
+          builder: (context, params) => const EntrarComCellWidget(),
         ),
         FFRoute(
           name: 'login',
           path: '/login',
           builder: (context, params) => const LoginWidget(),
+        ),
+        FFRoute(
+          name: 'CriarContaEmail',
+          path: '/criarContaEmail',
+          builder: (context, params) => CriarContaEmailWidget(
+            index: params.getParam('index', ParamType.int),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
