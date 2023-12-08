@@ -10,7 +10,7 @@ class EspecialidadesTable extends SupabaseTable<EspecialidadesRow> {
 }
 
 class EspecialidadesRow extends SupabaseDataRow {
-  EspecialidadesRow(Map<String, dynamic> data) : super(data);
+  EspecialidadesRow(super.data);
 
   @override
   SupabaseTable get table => EspecialidadesTable();

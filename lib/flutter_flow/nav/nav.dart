@@ -1,10 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
 
 import '/backend/supabase/supabase.dart';
 import '/auth/base_auth_user_provider.dart';
@@ -12,12 +9,8 @@ import '/auth/base_auth_user_provider.dart';
 import '/backend/push_notifications/push_notifications_handler.dart'
     show PushNotificationsHandler;
 import '/index.dart';
-import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -82,28 +75,28 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? HomePageWidget() : HomePageWidget(),
+          appStateNotifier.loggedIn ? const HomePageWidget() : const HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomePageWidget() : HomePageWidget(),
+              appStateNotifier.loggedIn ? const HomePageWidget() : const HomePageWidget(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
-          builder: (context, params) => HomePageWidget(),
+          builder: (context, params) => const HomePageWidget(),
         ),
         FFRoute(
           name: 'especialidades',
           path: '/especialidades',
-          builder: (context, params) => EspecialidadesWidget(),
+          builder: (context, params) => const EspecialidadesWidget(),
         ),
         FFRoute(
           name: 'perfil',
           path: '/perfil',
-          builder: (context, params) => PerfilWidget(),
+          builder: (context, params) => const PerfilWidget(),
         ),
         FFRoute(
           name: 'detalhesClubes',
@@ -123,7 +116,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'auth_4_Welcome',
           path: '/auth4Welcome',
-          builder: (context, params) => Auth4WelcomeWidget(),
+          builder: (context, params) => const Auth4WelcomeWidget(),
         ),
         FFRoute(
           name: 'auth_4_OnboardingPhoneVerify',
@@ -136,7 +129,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'auth_4_Login',
           path: '/auth4Login',
-          builder: (context, params) => Auth4LoginWidget(),
+          builder: (context, params) => const Auth4LoginWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -362,7 +355,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

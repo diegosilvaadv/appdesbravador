@@ -5,17 +5,14 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 import 'auth4_login_model.dart';
 export 'auth4_login_model.dart';
 
 class Auth4LoginWidget extends StatefulWidget {
-  const Auth4LoginWidget({Key? key}) : super(key: key);
+  const Auth4LoginWidget({super.key});
 
   @override
   _Auth4LoginWidgetState createState() => _Auth4LoginWidgetState();
@@ -43,22 +40,22 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -77,22 +74,22 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -111,22 +108,22 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -189,17 +186,17 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
               context.pop();
             },
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.00, -1.00),
+            alignment: const AlignmentDirectional(0.00, -1.00),
             child: Container(
               width: double.infinity,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 770.0,
               ),
               decoration: BoxDecoration(
@@ -211,14 +208,14 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 32.0, 0.0, 8.0),
                             child: Text(
                               'Login with phone',
@@ -228,7 +225,7 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                                 animationsMap['textOnPageLoadAnimation1']!),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 8.0),
                             child: Text(
                               'Enter your phone number in order to get started with your profile creation.',
@@ -238,12 +235,12 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                                 animationsMap['textOnPageLoadAnimation2']!),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 12.0, 0.0, 0.0),
                             child: TextFormField(
                               controller: _model.phoneNumberController,
                               focusNode: _model.phoneNumberFocusNode,
-                              autofillHints: [AutofillHints.telephoneNumber],
+                              autofillHints: const [AutofillHints.telephoneNumber],
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: 'Phone Number',
@@ -300,7 +297,7 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                                 filled: true,
                                 fillColor: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 16.0, 16.0, 8.0),
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -323,7 +320,7 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 16.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 16.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -332,11 +329,10 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                           onPressed: () async {
                             final phoneNumberVal =
                                 _model.phoneNumberController.text;
-                            if (phoneNumberVal == null ||
-                                phoneNumberVal.isEmpty ||
+                            if (phoneNumberVal.isEmpty ||
                                 !phoneNumberVal.startsWith('+')) {
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
+                                const SnackBar(
                                   content: Text(
                                       'Phone Number is required and has to start with +.'),
                                 ),
@@ -368,14 +364,14 @@ class _Auth4LoginWidgetState extends State<Auth4LoginWidget>
                           text: 'Send Code',
                           options: FFButtonOptions(
                             height: 52.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 44.0, 0.0, 44.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context).titleMedium,
                             elevation: 3.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),

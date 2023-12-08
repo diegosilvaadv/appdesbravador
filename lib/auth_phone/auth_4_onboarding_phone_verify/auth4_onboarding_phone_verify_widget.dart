@@ -5,23 +5,19 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'auth4_onboarding_phone_verify_model.dart';
 export 'auth4_onboarding_phone_verify_model.dart';
 
 class Auth4OnboardingPhoneVerifyWidget extends StatefulWidget {
   const Auth4OnboardingPhoneVerifyWidget({
-    Key? key,
+    super.key,
     this.phoneNumber,
     bool? isLogin,
-  })  : this.isLogin = isLogin ?? false,
-        super(key: key);
+  })  : isLogin = isLogin ?? false;
 
   final String? phoneNumber;
   final bool isLogin;
@@ -54,22 +50,22 @@ class _Auth4OnboardingPhoneVerifyWidgetState
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -127,17 +123,17 @@ class _Auth4OnboardingPhoneVerifyWidgetState
               context.pop();
             },
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.00, 0.00),
+            alignment: const AlignmentDirectional(0.00, 0.00),
             child: Container(
               width: double.infinity,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 670.0,
               ),
               decoration: BoxDecoration(
@@ -149,14 +145,14 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 32.0, 0.0, 8.0),
                             child: Text(
                               'Verify Code',
@@ -166,14 +162,14 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                                 animationsMap['textOnPageLoadAnimation']!),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 8.0),
                             child: RichText(
                               textScaleFactor:
                                   MediaQuery.of(context).textScaleFactor,
                               text: TextSpan(
                                 children: [
-                                  TextSpan(
+                                  const TextSpan(
                                     text:
                                         'Enter the 6 digit code we sent to the number below: ',
                                     style: TextStyle(),
@@ -200,7 +196,7 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 16.0, 0.0, 0.0),
                             child: PinCodeTextField(
                               autoDisposeControllers: false,
@@ -250,7 +246,7 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 16.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 16.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -260,9 +256,9 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                             if (widget.isLogin == true) {
                               GoRouter.of(context).prepareAuthEvent();
                               final smsCodeVal = _model.pinCodeController!.text;
-                              if (smsCodeVal == null || smsCodeVal.isEmpty) {
+                              if (smsCodeVal.isEmpty) {
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
+                                  const SnackBar(
                                     content:
                                         Text('Enter SMS verification code.'),
                                   ),
@@ -282,7 +278,7 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                                 'HomePage',
                                 context.mounted,
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
+                                  kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
                                     transitionType: PageTransitionType.fade,
                                   ),
@@ -291,9 +287,9 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                             } else {
                               GoRouter.of(context).prepareAuthEvent();
                               final smsCodeVal = _model.pinCodeController!.text;
-                              if (smsCodeVal == null || smsCodeVal.isEmpty) {
+                              if (smsCodeVal.isEmpty) {
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
+                                  const SnackBar(
                                     content:
                                         Text('Enter SMS verification code.'),
                                   ),
@@ -319,7 +315,7 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                                   ),
                                 }.withoutNulls,
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
+                                  kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.leftToRight,
@@ -332,14 +328,14 @@ class _Auth4OnboardingPhoneVerifyWidgetState
                           text: 'Verify Code',
                           options: FFButtonOptions(
                             height: 52.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 44.0, 0.0, 44.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context).titleMedium,
                             elevation: 3.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),

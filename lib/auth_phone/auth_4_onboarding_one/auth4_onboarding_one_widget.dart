@@ -10,24 +10,18 @@ import '/flutter_flow/upload_data.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 import 'auth4_onboarding_one_model.dart';
 export 'auth4_onboarding_one_model.dart';
 
 class Auth4OnboardingOneWidget extends StatefulWidget {
   const Auth4OnboardingOneWidget({
-    Key? key,
+    super.key,
     int? index,
-  })  : this.index = index ?? 0,
-        super(key: key);
+  })  : index = index ?? 0;
 
   final int index;
 
@@ -58,22 +52,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -92,22 +86,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -126,22 +120,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -159,22 +153,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -192,22 +186,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -226,22 +220,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -260,22 +254,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -294,22 +288,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -328,22 +322,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -362,22 +356,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -396,22 +390,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -430,22 +424,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -464,22 +458,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -498,22 +492,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -532,22 +526,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 350.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 350.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 350.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -566,22 +560,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -600,22 +594,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -634,22 +628,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -668,22 +662,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 100.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -702,22 +696,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -736,22 +730,22 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
         ),
         TiltEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.349, 0),
-          end: Offset(0, 0),
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: Offset(0.9, 0.9),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -823,16 +817,16 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
               context.pop();
             },
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.00, -1.00),
+            alignment: const AlignmentDirectional(0.00, -1.00),
             child: Container(
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 670.0,
               ),
               decoration: BoxDecoration(
@@ -843,13 +837,13 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                       width: double.infinity,
                       height: 500.0,
                       child: Stack(
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 40.0),
                             child: PageView(
                               physics: const NeverScrollableScrollPhysics(),
@@ -864,7 +858,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                               scrollDirection: Axis.horizontal,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
                                   child: SingleChildScrollView(
                                     child: Column(
@@ -874,7 +868,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 32.0, 0.0, 8.0),
                                           child: Text(
                                             'Whats your digits?',
@@ -886,7 +880,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 8.0),
                                           child: Text(
                                             'Enter your phone number in order to get started with your profile creation.',
@@ -898,14 +892,14 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 12.0, 0.0, 0.0),
                                           child: TextFormField(
                                             controller:
                                                 _model.phoneNumberController,
                                             focusNode:
                                                 _model.phoneNumberFocusNode,
-                                            autofillHints: [
+                                            autofillHints: const [
                                               AutofillHints.telephoneNumber
                                             ],
                                             obscureText: false,
@@ -988,7 +982,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
                                               contentPadding:
-                                                  EdgeInsetsDirectional
+                                                  const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 16.0, 16.0, 8.0),
                                             ),
@@ -1016,11 +1010,11 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                             false))
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 24.0, 0.0, 0.0),
                                             child: Container(
                                               width: double.infinity,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 maxWidth: 600.0,
                                               ),
                                               decoration: BoxDecoration(
@@ -1037,7 +1031,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 12.0, 12.0, 12.0),
                                                 child: Column(
@@ -1060,7 +1054,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   4.0,
@@ -1082,11 +1076,11 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                           ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 16.0, 0.0, 0.0),
                                           child: AnimatedContainer(
                                             duration:
-                                                Duration(milliseconds: 150),
+                                                const Duration(milliseconds: 150),
                                             curve: Curves.easeInOut,
                                             width: double.infinity,
                                             decoration: BoxDecoration(
@@ -1103,7 +1097,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       12.0, 12.0, 12.0, 12.0),
                                               child: Column(
@@ -1125,7 +1119,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -1150,7 +1144,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   key: _model.formKey3,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
                                     child: SingleChildScrollView(
                                       child: Column(
@@ -1160,7 +1154,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 32.0, 0.0, 8.0),
                                             child: Text(
                                               'What\'s your name?',
@@ -1173,7 +1167,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 8.0),
                                             child: Text(
                                               'Enter a name that people would recognize so your friends can find you.',
@@ -1186,14 +1180,14 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 12.0, 0.0, 0.0),
                                             child: TextFormField(
                                               controller:
                                                   _model.yourNameController1,
                                               focusNode:
                                                   _model.yourNameFocusNode1,
-                                              autofillHints: [
+                                              autofillHints: const [
                                                 AutofillHints.name
                                               ],
                                               obscureText: false,
@@ -1282,7 +1276,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
                                                 contentPadding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(0.0, 16.0,
                                                             16.0, 8.0),
                                               ),
@@ -1306,14 +1300,14 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 12.0, 0.0, 0.0),
                                             child: TextFormField(
                                               controller:
                                                   _model.usernameController,
                                               focusNode:
                                                   _model.usernameFocusNode,
-                                              autofillHints: [
+                                              autofillHints: const [
                                                 AutofillHints.name
                                               ],
                                               textCapitalization:
@@ -1413,7 +1407,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
                                                 contentPadding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(0.0, 16.0,
                                                             16.0, 8.0),
                                               ),
@@ -1437,14 +1431,14 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 12.0, 0.0, 0.0),
                                             child: TextFormField(
                                               controller:
                                                   _model.yourNameController2,
                                               focusNode:
                                                   _model.yourNameFocusNode2,
-                                              autofillHints: [
+                                              autofillHints: const [
                                                 AutofillHints.name
                                               ],
                                               obscureText: false,
@@ -1542,7 +1536,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
                                                 contentPadding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(0.0, 8.0,
                                                             16.0, 8.0),
                                               ),
@@ -1568,11 +1562,11 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 24.0, 0.0, 0.0),
                                             child: Container(
                                               width: double.infinity,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 maxWidth: 600.0,
                                               ),
                                               decoration: BoxDecoration(
@@ -1589,7 +1583,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 12.0, 12.0, 12.0),
                                                 child: Column(
@@ -1612,7 +1606,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   4.0,
@@ -1641,7 +1635,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   key: _model.formKey1,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
                                     child: SingleChildScrollView(
                                       child: Column(
@@ -1651,7 +1645,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 32.0, 0.0, 8.0),
                                             child: Text(
                                               'Upload your face',
@@ -1664,7 +1658,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 8.0),
                                             child: Text(
                                               'Enter a name that people would recognize so your friends can find you.',
@@ -1676,10 +1670,10 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 'textOnPageLoadAnimation6']!),
                                           ),
                                           Align(
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                 0.00, -1.00),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 12.0, 0.0, 0.0),
                                               child: Container(
@@ -1702,13 +1696,13 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.00, 0.00),
                                                   child: Stack(
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     2.0,
                                                                     2.0,
@@ -1725,11 +1719,11 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                             child:
                                                                 CachedNetworkImage(
                                                               fadeInDuration:
-                                                                  Duration(
+                                                                  const Duration(
                                                                       milliseconds:
                                                                           200),
                                                               fadeOutDuration:
-                                                                  Duration(
+                                                                  const Duration(
                                                                       milliseconds:
                                                                           200),
                                                               imageUrl:
@@ -1747,7 +1741,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     2.0,
                                                                     2.0,
@@ -1761,11 +1755,11 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                           child:
                                                               CachedNetworkImage(
                                                             fadeInDuration:
-                                                                Duration(
+                                                                const Duration(
                                                                     milliseconds:
                                                                         200),
                                                             fadeOutDuration:
-                                                                Duration(
+                                                                const Duration(
                                                                     milliseconds:
                                                                         200),
                                                             imageUrl: _model
@@ -1784,10 +1778,10 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                             ),
                                           ),
                                           Align(
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                 0.00, -1.00),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 16.0, 0.0, 0.0),
                                               child: FFButtonWidget(
@@ -1894,11 +1888,11 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 text: 'Upload Image',
                                                 options: FFButtonOptions(
                                                   height: 44.0,
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -1947,7 +1941,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   key: _model.formKey2,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
                                     child: SingleChildScrollView(
                                       child: Column(
@@ -1957,7 +1951,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 32.0, 0.0, 8.0),
                                             child: Text(
                                               'How old are you?',
@@ -1970,7 +1964,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 8.0),
                                             child: Text(
                                               'Let us know how old you are in order to continue.',
@@ -1987,7 +1981,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-                                              final _datePickedDate =
+                                              final datePickedDate =
                                                   await showDatePicker(
                                                 context: context,
                                                 initialDate:
@@ -2043,12 +2037,12 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 },
                                               );
 
-                                              if (_datePickedDate != null) {
+                                              if (datePickedDate != null) {
                                                 safeSetState(() {
                                                   _model.datePicked = DateTime(
-                                                    _datePickedDate.year,
-                                                    _datePickedDate.month,
-                                                    _datePickedDate.day,
+                                                    datePickedDate.year,
+                                                    datePickedDate.month,
+                                                    datePickedDate.day,
                                                   );
                                                 });
                                               }
@@ -2065,12 +2059,12 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .alternate,
-                                                    offset: Offset(0.0, 1.0),
+                                                    offset: const Offset(0.0, 1.0),
                                                   )
                                                 ],
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 12.0, 0.0, 12.0),
                                                 child: Row(
@@ -2119,7 +2113,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
                                   child: SingleChildScrollView(
                                     child: Column(
@@ -2129,7 +2123,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 32.0, 0.0, 8.0),
                                           child: Text(
                                             'Your profile!',
@@ -2141,7 +2135,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 8.0),
                                           child: Text(
                                             'Congrats, you made it! We can\'t wait for you to get started!',
@@ -2152,11 +2146,11 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                               'textOnPageLoadAnimation10']!),
                                         ),
                                         Align(
-                                          alignment: AlignmentDirectional(
+                                          alignment: const AlignmentDirectional(
                                               -1.00, -1.00),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 12.0, 0.0, 0.0),
                                             child: Container(
                                               width: 160.0,
@@ -2176,7 +2170,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         2.0, 2.0, 2.0, 2.0),
                                                 child: ClipRRect(
@@ -2184,9 +2178,9 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                       BorderRadius.circular(
                                                           8.0),
                                                   child: CachedNetworkImage(
-                                                    fadeInDuration: Duration(
+                                                    fadeInDuration: const Duration(
                                                         milliseconds: 200),
-                                                    fadeOutDuration: Duration(
+                                                    fadeOutDuration: const Duration(
                                                         milliseconds: 200),
                                                     imageUrl:
                                                         _model.uploadedFileUrl,
@@ -2202,7 +2196,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Text(
                                             'Your name',
@@ -2212,7 +2206,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
                                             _model.yourNameController1.text,
@@ -2222,7 +2216,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Text(
                                             'Username',
@@ -2232,7 +2226,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Text(
                                             _model.usernameController.text,
@@ -2248,7 +2242,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Text(
                                             'Your Bio',
@@ -2258,7 +2252,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 12.0, 0.0, 0.0),
                                           child: Text(
                                             valueOrDefault<String>(
@@ -2271,7 +2265,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 8.0, 0.0, 0.0),
                                           child: Text(
                                             'Date of Birth',
@@ -2281,7 +2275,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
                                             dateTimeFormat(
@@ -2303,9 +2297,9 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(-1.00, 1.00),
+                            alignment: const AlignmentDirectional(-1.00, 1.00),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 0.0, 16.0),
                               child: smooth_page_indicator.SmoothPageIndicator(
                                 controller: _model.pageViewController ??=
@@ -2322,7 +2316,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   await _model.pageViewController!
                                       .animateToPage(
                                     i,
-                                    duration: Duration(milliseconds: 500),
+                                    duration: const Duration(milliseconds: 500),
                                     curve: Curves.ease,
                                   );
                                 },
@@ -2348,7 +2342,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 16.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 12.0, 24.0, 16.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -2362,16 +2356,16 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                   onPressed: () async {
                                     await _model.pageViewController
                                         ?.previousPage(
-                                      duration: Duration(milliseconds: 300),
+                                      duration: const Duration(milliseconds: 300),
                                       curve: Curves.ease,
                                     );
                                   },
                                   text: 'Back',
                                   options: FFButtonOptions(
                                     height: 52.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
@@ -2404,17 +2398,16 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1.00, 1.00),
+                          alignment: const AlignmentDirectional(1.00, 1.00),
                           child: FFButtonWidget(
                             onPressed: () async {
                               if (_model.pageViewCurrentIndex == 0) {
                                 final phoneNumberVal =
                                     _model.phoneNumberController.text;
-                                if (phoneNumberVal == null ||
-                                    phoneNumberVal.isEmpty ||
+                                if (phoneNumberVal.isEmpty ||
                                     !phoneNumberVal.startsWith('+')) {
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
+                                    const SnackBar(
                                       content: Text(
                                           'Phone Number is required and has to start with +.'),
                                     ),
@@ -2449,7 +2442,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                 }
                                 // controlPageView
                                 await _model.pageViewController?.nextPage(
-                                  duration: Duration(milliseconds: 300),
+                                  duration: const Duration(milliseconds: 300),
                                   curve: Curves.ease,
                                 );
                               } else if (_model.pageViewCurrentIndex == 2) {
@@ -2457,8 +2450,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                     !_model.formKey1.currentState!.validate()) {
                                   return;
                                 }
-                                if (_model.uploadedFileUrl == null ||
-                                    _model.uploadedFileUrl.isEmpty) {
+                                if (_model.uploadedFileUrl.isEmpty) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
@@ -2472,7 +2464,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                       .info,
                                             ),
                                       ),
-                                      duration: Duration(milliseconds: 4000),
+                                      duration: const Duration(milliseconds: 4000),
                                       backgroundColor:
                                           FlutterFlowTheme.of(context).primary,
                                     ),
@@ -2481,7 +2473,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                 }
                                 // controlPageView
                                 await _model.pageViewController?.nextPage(
-                                  duration: Duration(milliseconds: 300),
+                                  duration: const Duration(milliseconds: 300),
                                   curve: Curves.ease,
                                 );
                               } else if (_model.pageViewCurrentIndex == 3) {
@@ -2505,7 +2497,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                       .primaryText,
                                             ),
                                       ),
-                                      duration: Duration(milliseconds: 3000),
+                                      duration: const Duration(milliseconds: 3000),
                                       backgroundColor:
                                           FlutterFlowTheme.of(context).primary,
                                     ),
@@ -2514,7 +2506,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                 }
                                 // controlPageView
                                 await _model.pageViewController?.nextPage(
-                                  duration: Duration(milliseconds: 300),
+                                  duration: const Duration(milliseconds: 300),
                                   curve: Curves.ease,
                                 );
                               } else {
@@ -2541,7 +2533,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                                 .info,
                                           ),
                                     ),
-                                    duration: Duration(milliseconds: 4000),
+                                    duration: const Duration(milliseconds: 4000),
                                     backgroundColor:
                                         FlutterFlowTheme.of(context).primary,
                                   ),
@@ -2550,7 +2542,7 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                 context.goNamed(
                                   'HomePage',
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
+                                    kTransitionInfoKey: const TransitionInfo(
                                       hasTransition: true,
                                       transitionType: PageTransitionType.fade,
                                     ),
@@ -2563,15 +2555,15 @@ class _Auth4OnboardingOneWidgetState extends State<Auth4OnboardingOneWidget>
                                 : 'Next',
                             options: FFButtonOptions(
                               height: 52.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   44.0, 0.0, 44.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle:
                                   FlutterFlowTheme.of(context).titleMedium,
                               elevation: 3.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),

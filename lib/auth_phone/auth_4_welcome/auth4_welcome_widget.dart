@@ -3,18 +3,16 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'auth4_welcome_model.dart';
 export 'auth4_welcome_model.dart';
 
 class Auth4WelcomeWidget extends StatefulWidget {
-  const Auth4WelcomeWidget({Key? key}) : super(key: key);
+  const Auth4WelcomeWidget({super.key});
 
   @override
   _Auth4WelcomeWidgetState createState() => _Auth4WelcomeWidgetState();
@@ -78,7 +76,7 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                 child: Container(
                   width: 100.0,
                   height: 100.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [Color(0x950C0C0C), Color(0xFF1D2428)],
                       stops: [0.0, 1.0],
@@ -86,15 +84,15 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                       end: AlignmentDirectional(0, 1.0),
                     ),
                   ),
-                  alignment: AlignmentDirectional(0.00, 1.00),
+                  alignment: const AlignmentDirectional(0.00, 1.00),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.00, 0.00),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 70.0, 0.0, 32.0),
                           child: Container(
                             width: 254.0,
@@ -102,14 +100,14 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16.0),
                             ),
-                            alignment: AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.00, 0.00),
                             child: Align(
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: const AlignmentDirectional(0.00, 0.00),
                               child: Stack(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.00, 0.00),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(0.0),
                                       child: BackdropFilter(
@@ -128,7 +126,7 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                                                 fontSize: 30.0,
                                               ),
                                           colors: [
-                                            Color(0xFFE4E4E4),
+                                            const Color(0xFFE4E4E4),
                                             FlutterFlowTheme.of(context).warning
                                           ],
                                           gradientDirection:
@@ -140,7 +138,7 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                                   ),
                                   Align(
                                     alignment:
-                                        AlignmentDirectional(0.82, -1.37),
+                                        const AlignmentDirectional(0.82, -1.37),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -148,7 +146,7 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                                         width: 70.0,
                                         height: 70.0,
                                         fit: BoxFit.contain,
-                                        alignment: Alignment(0.00, 0.00),
+                                        alignment: const Alignment(0.00, 0.00),
                                       ),
                                     ),
                                   ),
@@ -159,7 +157,7 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             24.0, 64.0, 24.0, 24.0),
                         child: Text(
                           'Dive into the next social experiment',
@@ -168,31 +166,31 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                               .displayMedium
                               .override(
                                 fontFamily: 'Outfit',
-                                color: Color(0xFFF1F1F1),
+                                color: const Color(0xFFF1F1F1),
                               ),
                         ),
                       ),
-                    ].addToStart(SizedBox(height: 70.0)),
+                    ].addToStart(const SizedBox(height: 70.0)),
                   ),
                 ),
               ),
             ),
             Container(
               width: double.infinity,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 670.0,
               ),
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 12.0, 20.0, 12.0),
                       child: FFButtonWidget(
                         onPressed: () async {
@@ -216,9 +214,9 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 56.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 12.0, 0.0),
                           color: FlutterFlowTheme.of(context).primaryText,
                           textStyle:
@@ -242,14 +240,14 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
                       child: Text(
                         'Ou entre com',
                         style: FlutterFlowTheme.of(context).labelMedium,
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 12.0, 20.0, 12.0),
                       child: FFButtonWidget(
                         onPressed: () async {
@@ -271,9 +269,9 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 56.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 12.0, 0.0),
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
@@ -294,7 +292,7 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 64.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 64.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -308,7 +306,7 @@ class _Auth4WelcomeWidgetState extends State<Auth4WelcomeWidget> {
                               MediaQuery.of(context).textScaleFactor,
                           text: TextSpan(
                             children: [
-                              TextSpan(
+                              const TextSpan(
                                 text: 'Já tem uma conta? ',
                                 style: TextStyle(),
                               ),

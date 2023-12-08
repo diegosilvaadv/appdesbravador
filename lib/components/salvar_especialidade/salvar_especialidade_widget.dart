@@ -4,20 +4,17 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'salvar_especialidade_model.dart';
 export 'salvar_especialidade_model.dart';
 
 class SalvarEspecialidadeWidget extends StatefulWidget {
   const SalvarEspecialidadeWidget({
-    Key? key,
+    super.key,
     this.salvarEspec,
-  }) : super(key: key);
+  });
 
   final EspecialidadesRow? salvarEspec;
 
@@ -55,13 +52,13 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.00, 0.00),
+      alignment: const AlignmentDirectional(0.00, 0.00),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 0.85,
         height: MediaQuery.sizeOf(context).height * 0.4,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 5.0,
               color: Color(0x3B1D2429),
@@ -71,19 +68,19 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
           borderRadius: BorderRadius.circular(16.0),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-1.00, -1.00),
+                      alignment: const AlignmentDirectional(-1.00, -1.00),
                       child: Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         color: FlutterFlowTheme.of(context).tertiary,
@@ -92,7 +89,7 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
                           borderRadius: BorderRadius.circular(2.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               4.0, 4.0, 4.0, 4.0),
                           child: Text(
                             formatNumber(
@@ -115,7 +112,7 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -138,13 +135,13 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(1.00, 1.00),
+                      alignment: const AlignmentDirectional(1.00, 1.00),
                       child: Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         color: FlutterFlowTheme.of(context).secondary,
@@ -153,7 +150,7 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
                           borderRadius: BorderRadius.circular(2.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               4.0, 4.0, 4.0, 4.0),
                           child: Text(
                             formatNumber(
@@ -176,7 +173,7 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
                     Flexible(
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                         child: Text(
                           valueOrDefault<String>(
                             widget.salvarEspec?.tag,
@@ -218,14 +215,14 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
                       context: context,
                       builder: (alertDialogContext) {
                         return AlertDialog(
-                          title: Text('Você já concluiu essa Especialidade!'),
+                          title: const Text('Você já concluiu essa Especialidade!'),
                           content:
-                              Text('Não pode ter Especialidades duplicadas.'),
+                              const Text('Não pode ter Especialidades duplicadas.'),
                           actions: [
                             TextButton(
                               onPressed: () =>
                                   Navigator.pop(alertDialogContext),
-                              child: Text('Ok'),
+                              child: const Text('Ok'),
                             ),
                           ],
                         );
@@ -253,14 +250,14 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
                       context: context,
                       builder: (alertDialogContext) {
                         return AlertDialog(
-                          title: Text('Marcada como Concluida!'),
+                          title: const Text('Marcada como Concluida!'),
                           content:
-                              Text('Aparecerá nas suas \"especialidades\".'),
+                              const Text('Aparecerá nas suas "especialidades".'),
                           actions: [
                             TextButton(
                               onPressed: () =>
                                   Navigator.pop(alertDialogContext),
-                              child: Text('Ok'),
+                              child: const Text('Ok'),
                             ),
                           ],
                         );
@@ -275,23 +272,23 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
                 options: FFButtonOptions(
                   width: double.infinity,
                   height: 60.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).bodyLarge.override(
                         fontFamily: 'Readex Pro',
                         color: Colors.white,
                       ),
                   elevation: 2.0,
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.transparent,
                     width: 1.0,
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () async {
                     Navigator.pop(context);
@@ -300,9 +297,9 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
                   options: FFButtonOptions(
                     width: double.infinity,
                     height: 60.0,
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Lexend Deca',
@@ -311,7 +308,7 @@ class _SalvarEspecialidadeWidgetState extends State<SalvarEspecialidadeWidget> {
                           fontWeight: FontWeight.normal,
                         ),
                     elevation: 0.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent,
                       width: 0.0,
                     ),

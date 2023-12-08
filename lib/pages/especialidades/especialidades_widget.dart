@@ -1,5 +1,4 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/nav_bar/nav_bar_widget.dart';
 import '/components/salvar_especialidade/salvar_especialidade_widget.dart';
@@ -11,7 +10,6 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -20,7 +18,7 @@ import 'especialidades_model.dart';
 export 'especialidades_model.dart';
 
 class EspecialidadesWidget extends StatefulWidget {
-  const EspecialidadesWidget({Key? key}) : super(key: key);
+  const EspecialidadesWidget({super.key});
 
   @override
   _EspecialidadesWidgetState createState() => _EspecialidadesWidgetState();
@@ -79,7 +77,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                   fontSize: 22.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -98,12 +96,12 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          if (currentUserEmail != '')
+                          if (currentUserUid != '')
                             Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -123,7 +121,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 20.0, 10.0, 20.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -138,7 +136,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                   width: 100.0,
                                                   height: 100.0,
                                                   clipBehavior: Clip.antiAlias,
-                                                  decoration: BoxDecoration(
+                                                  decoration: const BoxDecoration(
                                                     shape: BoxShape.circle,
                                                   ),
                                                   child: Image.network(
@@ -151,7 +149,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 6.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -180,7 +178,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -218,7 +216,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 6.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -259,7 +257,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 6.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -308,7 +306,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 6.0, 0.0, 15.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -343,7 +341,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -364,7 +362,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(6.0, 6.0,
                                                                 6.0, 6.0),
                                                     child: Text(
@@ -396,7 +394,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(6.0, 6.0,
                                                                 6.0, 6.0),
                                                     child: AuthUserStreamWidget(
@@ -437,7 +435,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                 ),
                               ],
                             ),
-                          if (currentUserEmail == '')
+                          if (currentUserUid == '')
                             Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -457,7 +455,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 10.0, 10.0, 10.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -480,7 +478,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -506,7 +504,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -519,7 +517,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                       'auth_4_Welcome',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            TransitionInfo(
+                                                            const TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -535,11 +533,11 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                   options: FFButtonOptions(
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 10.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -555,7 +553,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                           fontSize: 16.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -574,678 +572,688 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                 ),
                               ],
                             ),
-                          if (currentUserEmail != '')
+                          if (currentUserUid != '')
                             Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                if (currentUserEmail != '')
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 0.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Expanded(
-                                          child: Container(
-                                            width: MediaQuery.sizeOf(context)
-                                                    .width *
-                                                1.0,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              borderRadius: BorderRadius.only(
-                                                bottomLeft:
-                                                    Radius.circular(0.0),
-                                                bottomRight:
-                                                    Radius.circular(0.0),
-                                                topLeft: Radius.circular(12.0),
-                                                topRight: Radius.circular(12.0),
-                                              ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 10.0, 0.0, 0.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          width:
+                                              MediaQuery.sizeOf(context).width *
+                                                  1.0,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            borderRadius: const BorderRadius.only(
+                                              bottomLeft: Radius.circular(0.0),
+                                              bottomRight: Radius.circular(0.0),
+                                              topLeft: Radius.circular(12.0),
+                                              topRight: Radius.circular(12.0),
                                             ),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      20.0, 20.0, 20.0, 20.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Container(
-                                                        width: 300.0,
-                                                        decoration:
-                                                            BoxDecoration(),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      8.0,
-                                                                      0.0,
-                                                                      8.0,
-                                                                      0.0),
-                                                          child: FutureBuilder<
-                                                              List<
-                                                                  EspecialidadesRow>>(
-                                                            future:
-                                                                EspecialidadesTable()
-                                                                    .queryRows(
-                                                              queryFn: (q) => q,
-                                                            ),
-                                                            builder: (context,
-                                                                snapshot) {
-                                                              // Customize what your widget looks like when it's loading.
-                                                              if (!snapshot
-                                                                  .hasData) {
-                                                                return Center(
+                                          ),
+                                          child: Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    20.0, 20.0, 20.0, 20.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Container(
+                                                      width: 300.0,
+                                                      decoration:
+                                                          const BoxDecoration(),
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    8.0,
+                                                                    0.0,
+                                                                    8.0,
+                                                                    0.0),
+                                                        child: FutureBuilder<
+                                                            List<
+                                                                EspecialidadesRow>>(
+                                                          future:
+                                                              EspecialidadesTable()
+                                                                  .queryRows(
+                                                            queryFn: (q) => q,
+                                                          ),
+                                                          builder: (context,
+                                                              snapshot) {
+                                                            // Customize what your widget looks like when it's loading.
+                                                            if (!snapshot
+                                                                .hasData) {
+                                                              return Center(
+                                                                child: SizedBox(
+                                                                  width: 50.0,
+                                                                  height: 50.0,
                                                                   child:
-                                                                      SizedBox(
-                                                                    width: 50.0,
-                                                                    height:
-                                                                        50.0,
-                                                                    child:
-                                                                        CircularProgressIndicator(
-                                                                      valueColor:
-                                                                          AlwaysStoppedAnimation<
-                                                                              Color>(
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .primary,
-                                                                      ),
+                                                                      CircularProgressIndicator(
+                                                                    valueColor:
+                                                                        AlwaysStoppedAnimation<
+                                                                            Color>(
+                                                                      FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary,
                                                                     ),
                                                                   ),
-                                                                );
-                                                              }
-                                                              List<EspecialidadesRow>
-                                                                  textFieldEspecialidadesRowList =
-                                                                  snapshot
-                                                                      .data!;
-                                                              return Autocomplete<
-                                                                  String>(
-                                                                initialValue:
-                                                                    TextEditingValue(),
-                                                                optionsBuilder:
-                                                                    (textEditingValue) {
-                                                                  if (textEditingValue
-                                                                          .text ==
-                                                                      '') {
-                                                                    return const Iterable<
-                                                                        String>.empty();
-                                                                  }
-                                                                  return textFieldEspecialidadesRowList
-                                                                      .map((e) => e
-                                                                          .nomeEspecialidade)
-                                                                      .withoutNulls
-                                                                      .toList()
-                                                                      .where(
-                                                                          (option) {
-                                                                    final lowercaseOption =
-                                                                        option
-                                                                            .toLowerCase();
-                                                                    return lowercaseOption.contains(
-                                                                        textEditingValue
-                                                                            .text
-                                                                            .toLowerCase());
-                                                                  });
-                                                                },
-                                                                optionsViewBuilder:
-                                                                    (context,
-                                                                        onSelected,
-                                                                        options) {
-                                                                  return AutocompleteOptionsList(
-                                                                    textFieldKey:
-                                                                        _model
-                                                                            .textFieldKey,
-                                                                    textController:
-                                                                        _model
-                                                                            .textController!,
-                                                                    options: options
-                                                                        .toList(),
-                                                                    onSelected:
-                                                                        onSelected,
-                                                                    textStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium,
-                                                                    textHighlightStyle:
-                                                                        TextStyle(),
-                                                                    elevation:
-                                                                        4.0,
-                                                                    optionBackgroundColor:
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .primaryBackground,
-                                                                    optionHighlightColor:
-                                                                        FlutterFlowTheme.of(context)
-                                                                            .secondaryBackground,
-                                                                    maxHeight:
-                                                                        200.0,
-                                                                  );
-                                                                },
-                                                                onSelected: (String
-                                                                    selection) {
-                                                                  setState(() =>
-                                                                      _model.textFieldSelectedOption =
-                                                                          selection);
-                                                                  FocusScope.of(
+                                                                ),
+                                                              );
+                                                            }
+                                                            List<EspecialidadesRow>
+                                                                textFieldEspecialidadesRowList =
+                                                                snapshot.data!;
+                                                            return Autocomplete<
+                                                                String>(
+                                                              initialValue:
+                                                                  const TextEditingValue(),
+                                                              optionsBuilder:
+                                                                  (textEditingValue) {
+                                                                if (textEditingValue
+                                                                        .text ==
+                                                                    '') {
+                                                                  return const Iterable<
+                                                                      String>.empty();
+                                                                }
+                                                                return textFieldEspecialidadesRowList
+                                                                    .map((e) => e
+                                                                        .nomeEspecialidade)
+                                                                    .withoutNulls
+                                                                    .toList()
+                                                                    .where(
+                                                                        (option) {
+                                                                  final lowercaseOption =
+                                                                      option
+                                                                          .toLowerCase();
+                                                                  return lowercaseOption.contains(
+                                                                      textEditingValue
+                                                                          .text
+                                                                          .toLowerCase());
+                                                                });
+                                                              },
+                                                              optionsViewBuilder:
+                                                                  (context,
+                                                                      onSelected,
+                                                                      options) {
+                                                                return AutocompleteOptionsList(
+                                                                  textFieldKey:
+                                                                      _model
+                                                                          .textFieldKey,
+                                                                  textController:
+                                                                      _model
+                                                                          .textController!,
+                                                                  options: options
+                                                                      .toList(),
+                                                                  onSelected:
+                                                                      onSelected,
+                                                                  textStyle: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .unfocus();
-                                                                },
-                                                                fieldViewBuilder:
-                                                                    (
-                                                                  context,
-                                                                  textEditingController,
-                                                                  focusNode,
-                                                                  onEditingComplete,
-                                                                ) {
-                                                                  _model.textFieldFocusNode =
-                                                                      focusNode;
+                                                                      .bodyMedium,
+                                                                  textHighlightStyle:
+                                                                      const TextStyle(),
+                                                                  elevation:
+                                                                      4.0,
+                                                                  optionBackgroundColor:
+                                                                      FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryBackground,
+                                                                  optionHighlightColor:
+                                                                      FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryBackground,
+                                                                  maxHeight:
+                                                                      200.0,
+                                                                );
+                                                              },
+                                                              onSelected: (String
+                                                                  selection) {
+                                                                setState(() =>
+                                                                    _model.textFieldSelectedOption =
+                                                                        selection);
+                                                                FocusScope.of(
+                                                                        context)
+                                                                    .unfocus();
+                                                              },
+                                                              fieldViewBuilder:
+                                                                  (
+                                                                context,
+                                                                textEditingController,
+                                                                focusNode,
+                                                                onEditingComplete,
+                                                              ) {
+                                                                _model.textFieldFocusNode =
+                                                                    focusNode;
 
-                                                                  _model.textController =
-                                                                      textEditingController;
-                                                                  return TextFormField(
-                                                                    key: _model
-                                                                        .textFieldKey,
-                                                                    controller:
-                                                                        textEditingController,
-                                                                    focusNode:
-                                                                        focusNode,
-                                                                    onEditingComplete:
-                                                                        onEditingComplete,
-                                                                    onChanged: (_) =>
-                                                                        EasyDebounce
-                                                                            .debounce(
-                                                                      '_model.textController',
-                                                                      Duration(
-                                                                          milliseconds:
-                                                                              2000),
-                                                                      () async {
-                                                                        safeSetState(
-                                                                            () {
-                                                                          _model.simpleSearchResults = TextSearch(textFieldEspecialidadesRowList.map((e) => e.nomeEspecialidade).withoutNulls.toList().map((str) => TextSearchItem.fromTerms(str, [str])).toList())
-                                                                              .search(_model.textController.text)
-                                                                              .map((r) => r.object)
-                                                                              .toList();
-                                                                          ;
-                                                                        });
-                                                                        setState(
-                                                                            () {
-                                                                          FFAppState().condicaoPsquisa = _model
-                                                                              .textController
-                                                                              .text;
-                                                                        });
-                                                                      },
-                                                                    ),
-                                                                    obscureText:
-                                                                        false,
-                                                                    decoration:
-                                                                        InputDecoration(
-                                                                      labelText:
-                                                                          'Buscar por Especialidades',
-                                                                      labelStyle: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .labelMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Readex Pro',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).primaryText,
-                                                                            fontSize:
-                                                                                16.0,
-                                                                          ),
-                                                                      hintStyle: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .labelMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Readex Pro',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).secondaryText,
-                                                                          ),
-                                                                      enabledBorder:
-                                                                          OutlineInputBorder(
-                                                                        borderSide:
-                                                                            BorderSide(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).secondaryBackground,
-                                                                          width:
-                                                                              1.0,
-                                                                        ),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(25.0),
-                                                                      ),
-                                                                      focusedBorder:
-                                                                          OutlineInputBorder(
-                                                                        borderSide:
-                                                                            BorderSide(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).primary,
-                                                                          width:
-                                                                              1.0,
-                                                                        ),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(25.0),
-                                                                      ),
-                                                                      errorBorder:
-                                                                          OutlineInputBorder(
-                                                                        borderSide:
-                                                                            BorderSide(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).error,
-                                                                          width:
-                                                                              1.0,
-                                                                        ),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(25.0),
-                                                                      ),
-                                                                      focusedErrorBorder:
-                                                                          OutlineInputBorder(
-                                                                        borderSide:
-                                                                            BorderSide(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).error,
-                                                                          width:
-                                                                              1.0,
-                                                                        ),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(25.0),
-                                                                      ),
-                                                                      filled:
-                                                                          true,
-                                                                      fillColor:
-                                                                          FlutterFlowTheme.of(context)
-                                                                              .secondary,
-                                                                      prefixIcon:
-                                                                          Icon(
-                                                                        Icons
-                                                                            .search,
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .primaryText,
-                                                                        size:
-                                                                            20.0,
-                                                                      ),
-                                                                    ),
-                                                                    style: FlutterFlowTheme.of(
+                                                                _model.textController =
+                                                                    textEditingController;
+                                                                return TextFormField(
+                                                                  key: _model
+                                                                      .textFieldKey,
+                                                                  controller:
+                                                                      textEditingController,
+                                                                  focusNode:
+                                                                      focusNode,
+                                                                  onEditingComplete:
+                                                                      onEditingComplete,
+                                                                  onChanged: (_) =>
+                                                                      EasyDebounce
+                                                                          .debounce(
+                                                                    '_model.textController',
+                                                                    const Duration(
+                                                                        milliseconds:
+                                                                            2000),
+                                                                    () async {
+                                                                      safeSetState(
+                                                                          () {
+                                                                        _model
+                                                                            .simpleSearchResults = TextSearch(
+                                                                                textFieldEspecialidadesRowList.map((e) => e.nomeEspecialidade).withoutNulls.toList().map((str) => TextSearchItem.fromTerms(str, [str])).toList())
+                                                                            .search(_model.textController.text)
+                                                                            .map((r) => r.object)
+                                                                            .toList();
+                                                                      });
+                                                                      setState(
+                                                                          () {
+                                                                        FFAppState().condicaoPsquisa = _model
+                                                                            .textController
+                                                                            .text;
+                                                                      });
+                                                                    },
+                                                                  ),
+                                                                  obscureText:
+                                                                      false,
+                                                                  decoration:
+                                                                      InputDecoration(
+                                                                    labelText:
+                                                                        'Buscar por Especialidades',
+                                                                    labelStyle: FlutterFlowTheme.of(
                                                                             context)
-                                                                        .bodyMedium
+                                                                        .labelMedium
                                                                         .override(
                                                                           fontFamily:
                                                                               'Readex Pro',
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).primaryText,
                                                                           fontSize:
                                                                               16.0,
                                                                         ),
-                                                                    textAlign:
-                                                                        TextAlign
-                                                                            .start,
-                                                                    validator: _model
-                                                                        .textControllerValidator
-                                                                        .asValidator(
-                                                                            context),
-                                                                  );
-                                                                },
-                                                              );
-                                                            },
-                                                          ),
+                                                                    hintStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .labelMedium
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Readex Pro',
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).secondaryText,
+                                                                        ),
+                                                                    enabledBorder:
+                                                                        OutlineInputBorder(
+                                                                      borderSide:
+                                                                          BorderSide(
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryBackground,
+                                                                        width:
+                                                                            1.0,
+                                                                      ),
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              25.0),
+                                                                    ),
+                                                                    focusedBorder:
+                                                                        OutlineInputBorder(
+                                                                      borderSide:
+                                                                          BorderSide(
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .primary,
+                                                                        width:
+                                                                            1.0,
+                                                                      ),
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              25.0),
+                                                                    ),
+                                                                    errorBorder:
+                                                                        OutlineInputBorder(
+                                                                      borderSide:
+                                                                          BorderSide(
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .error,
+                                                                        width:
+                                                                            1.0,
+                                                                      ),
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              25.0),
+                                                                    ),
+                                                                    focusedErrorBorder:
+                                                                        OutlineInputBorder(
+                                                                      borderSide:
+                                                                          BorderSide(
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .error,
+                                                                        width:
+                                                                            1.0,
+                                                                      ),
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              25.0),
+                                                                    ),
+                                                                    filled:
+                                                                        true,
+                                                                    fillColor: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondary,
+                                                                    prefixIcon:
+                                                                        Icon(
+                                                                      Icons
+                                                                          .search,
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryText,
+                                                                      size:
+                                                                          20.0,
+                                                                    ),
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Readex Pro',
+                                                                        fontSize:
+                                                                            16.0,
+                                                                      ),
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .start,
+                                                                  validator: _model
+                                                                      .textControllerValidator
+                                                                      .asValidator(
+                                                                          context),
+                                                                );
+                                                              },
+                                                            );
+                                                          },
                                                         ),
                                                       ),
-                                                    ],
-                                                  ),
-                                                  Align(
-                                                    alignment:
-                                                        AlignmentDirectional(
-                                                            0.00, 0.00),
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  10.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Material(
-                                                        color:
-                                                            Colors.transparent,
-                                                        elevation: 3.0,
-                                                        shape:
-                                                            RoundedRectangleBorder(
+                                                    ),
+                                                  ],
+                                                ),
+                                                Align(
+                                                  alignment:
+                                                      const AlignmentDirectional(
+                                                          0.00, 0.00),
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 10.0,
+                                                                0.0, 0.0),
+                                                    child: Material(
+                                                      color: Colors.transparent,
+                                                      elevation: 3.0,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(8.0),
+                                                      ),
+                                                      child: Container(
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
                                                                       8.0),
                                                         ),
-                                                        child: Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryBackground,
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        8.0),
-                                                          ),
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  0.00, 0.00),
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0.0,
-                                                                        6.0,
-                                                                        0.0,
-                                                                        6.0),
-                                                            child: Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
-                                                              children: [
-                                                                InkWell(
-                                                                  splashColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  focusColor: Colors
-                                                                      .transparent,
-                                                                  hoverColor: Colors
-                                                                      .transparent,
-                                                                  highlightColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  onTap:
-                                                                      () async {
-                                                                    setState(
-                                                                        () {
-                                                                      FFAppState()
-                                                                          .TagsCondicao = 0;
-                                                                    });
-                                                                  },
-                                                                  child: Card(
-                                                                    clipBehavior:
-                                                                        Clip.antiAliasWithSaveLayer,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryBackground,
-                                                                    elevation:
-                                                                        4.0,
-                                                                    shape:
-                                                                        RoundedRectangleBorder(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              4.0),
-                                                                    ),
-                                                                    child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          10.0,
-                                                                          4.0,
-                                                                          10.0,
-                                                                          4.0),
-                                                                      child:
-                                                                          Text(
-                                                                        '1',
-                                                                        textAlign:
-                                                                            TextAlign.center,
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Readex Pro',
-                                                                              fontSize: 25.0,
-                                                                              fontWeight: FontWeight.bold,
-                                                                            ),
-                                                                      ),
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                0.00, 0.00),
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      6.0,
+                                                                      0.0,
+                                                                      6.0),
+                                                          child: Row(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .center,
+                                                            children: [
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  setState(() {
+                                                                    FFAppState()
+                                                                        .TagsCondicao = 0;
+                                                                  });
+                                                                },
+                                                                child: Card(
+                                                                  clipBehavior:
+                                                                      Clip.antiAliasWithSaveLayer,
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryBackground,
+                                                                  elevation:
+                                                                      4.0,
+                                                                  shape:
+                                                                      RoundedRectangleBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            4.0),
+                                                                  ),
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            10.0,
+                                                                            4.0,
+                                                                            10.0,
+                                                                            4.0),
+                                                                    child: Text(
+                                                                      '1',
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Readex Pro',
+                                                                            fontSize:
+                                                                                25.0,
+                                                                            fontWeight:
+                                                                                FontWeight.bold,
+                                                                          ),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                InkWell(
-                                                                  splashColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  focusColor: Colors
-                                                                      .transparent,
-                                                                  hoverColor: Colors
-                                                                      .transparent,
-                                                                  highlightColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  onTap:
-                                                                      () async {
-                                                                    setState(
-                                                                        () {
-                                                                      FFAppState()
-                                                                              .TagsCondicao =
-                                                                          100;
-                                                                    });
-                                                                  },
-                                                                  child: Card(
-                                                                    clipBehavior:
-                                                                        Clip.antiAliasWithSaveLayer,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryBackground,
-                                                                    elevation:
-                                                                        4.0,
-                                                                    shape:
-                                                                        RoundedRectangleBorder(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              4.0),
-                                                                    ),
-                                                                    child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          10.0,
-                                                                          4.0,
-                                                                          10.0,
-                                                                          4.0),
-                                                                      child:
-                                                                          Text(
-                                                                        '2',
-                                                                        textAlign:
-                                                                            TextAlign.center,
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Readex Pro',
-                                                                              fontSize: 25.0,
-                                                                              fontWeight: FontWeight.bold,
-                                                                            ),
-                                                                      ),
+                                                              ),
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  setState(() {
+                                                                    FFAppState()
+                                                                            .TagsCondicao =
+                                                                        100;
+                                                                  });
+                                                                },
+                                                                child: Card(
+                                                                  clipBehavior:
+                                                                      Clip.antiAliasWithSaveLayer,
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryBackground,
+                                                                  elevation:
+                                                                      4.0,
+                                                                  shape:
+                                                                      RoundedRectangleBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            4.0),
+                                                                  ),
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            10.0,
+                                                                            4.0,
+                                                                            10.0,
+                                                                            4.0),
+                                                                    child: Text(
+                                                                      '2',
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Readex Pro',
+                                                                            fontSize:
+                                                                                25.0,
+                                                                            fontWeight:
+                                                                                FontWeight.bold,
+                                                                          ),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                InkWell(
-                                                                  splashColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  focusColor: Colors
-                                                                      .transparent,
-                                                                  hoverColor: Colors
-                                                                      .transparent,
-                                                                  highlightColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  onTap:
-                                                                      () async {
-                                                                    setState(
-                                                                        () {
-                                                                      FFAppState()
-                                                                              .TagsCondicao =
-                                                                          200;
-                                                                    });
-                                                                  },
-                                                                  child: Card(
-                                                                    clipBehavior:
-                                                                        Clip.antiAliasWithSaveLayer,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryBackground,
-                                                                    elevation:
-                                                                        4.0,
-                                                                    shape:
-                                                                        RoundedRectangleBorder(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              4.0),
-                                                                    ),
-                                                                    child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          10.0,
-                                                                          4.0,
-                                                                          10.0,
-                                                                          4.0),
-                                                                      child:
-                                                                          Text(
-                                                                        '3',
-                                                                        textAlign:
-                                                                            TextAlign.center,
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Readex Pro',
-                                                                              fontSize: 25.0,
-                                                                              fontWeight: FontWeight.bold,
-                                                                            ),
-                                                                      ),
+                                                              ),
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  setState(() {
+                                                                    FFAppState()
+                                                                            .TagsCondicao =
+                                                                        200;
+                                                                  });
+                                                                },
+                                                                child: Card(
+                                                                  clipBehavior:
+                                                                      Clip.antiAliasWithSaveLayer,
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryBackground,
+                                                                  elevation:
+                                                                      4.0,
+                                                                  shape:
+                                                                      RoundedRectangleBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            4.0),
+                                                                  ),
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            10.0,
+                                                                            4.0,
+                                                                            10.0,
+                                                                            4.0),
+                                                                    child: Text(
+                                                                      '3',
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Readex Pro',
+                                                                            fontSize:
+                                                                                25.0,
+                                                                            fontWeight:
+                                                                                FontWeight.bold,
+                                                                          ),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                InkWell(
-                                                                  splashColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  focusColor: Colors
-                                                                      .transparent,
-                                                                  hoverColor: Colors
-                                                                      .transparent,
-                                                                  highlightColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  onTap:
-                                                                      () async {
-                                                                    setState(
-                                                                        () {
-                                                                      FFAppState()
-                                                                              .TagsCondicao =
-                                                                          300;
-                                                                    });
-                                                                  },
-                                                                  child: Card(
-                                                                    clipBehavior:
-                                                                        Clip.antiAliasWithSaveLayer,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryBackground,
-                                                                    elevation:
-                                                                        4.0,
-                                                                    shape:
-                                                                        RoundedRectangleBorder(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              4.0),
-                                                                    ),
-                                                                    child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          10.0,
-                                                                          4.0,
-                                                                          10.0,
-                                                                          4.0),
-                                                                      child:
-                                                                          Text(
-                                                                        '4',
-                                                                        textAlign:
-                                                                            TextAlign.center,
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Readex Pro',
-                                                                              fontSize: 25.0,
-                                                                              fontWeight: FontWeight.bold,
-                                                                            ),
-                                                                      ),
+                                                              ),
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  setState(() {
+                                                                    FFAppState()
+                                                                            .TagsCondicao =
+                                                                        300;
+                                                                  });
+                                                                },
+                                                                child: Card(
+                                                                  clipBehavior:
+                                                                      Clip.antiAliasWithSaveLayer,
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryBackground,
+                                                                  elevation:
+                                                                      4.0,
+                                                                  shape:
+                                                                      RoundedRectangleBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            4.0),
+                                                                  ),
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            10.0,
+                                                                            4.0,
+                                                                            10.0,
+                                                                            4.0),
+                                                                    child: Text(
+                                                                      '4',
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Readex Pro',
+                                                                            fontSize:
+                                                                                25.0,
+                                                                            fontWeight:
+                                                                                FontWeight.bold,
+                                                                          ),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                InkWell(
-                                                                  splashColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  focusColor: Colors
-                                                                      .transparent,
-                                                                  hoverColor: Colors
-                                                                      .transparent,
-                                                                  highlightColor:
-                                                                      Colors
-                                                                          .transparent,
-                                                                  onTap:
-                                                                      () async {
-                                                                    setState(
-                                                                        () {
-                                                                      FFAppState()
-                                                                              .TagsCondicao =
-                                                                          400;
-                                                                    });
-                                                                  },
-                                                                  child: Card(
-                                                                    clipBehavior:
-                                                                        Clip.antiAliasWithSaveLayer,
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryBackground,
-                                                                    elevation:
-                                                                        4.0,
-                                                                    shape:
-                                                                        RoundedRectangleBorder(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              4.0),
-                                                                    ),
-                                                                    child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          10.0,
-                                                                          4.0,
-                                                                          10.0,
-                                                                          4.0),
-                                                                      child:
-                                                                          Text(
-                                                                        '5',
-                                                                        textAlign:
-                                                                            TextAlign.center,
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Readex Pro',
-                                                                              fontSize: 25.0,
-                                                                              fontWeight: FontWeight.bold,
-                                                                            ),
-                                                                      ),
+                                                              ),
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  setState(() {
+                                                                    FFAppState()
+                                                                            .TagsCondicao =
+                                                                        400;
+                                                                  });
+                                                                },
+                                                                child: Card(
+                                                                  clipBehavior:
+                                                                      Clip.antiAliasWithSaveLayer,
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryBackground,
+                                                                  elevation:
+                                                                      4.0,
+                                                                  shape:
+                                                                      RoundedRectangleBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            4.0),
+                                                                  ),
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            10.0,
+                                                                            4.0,
+                                                                            10.0,
+                                                                            4.0),
+                                                                    child: Text(
+                                                                      '5',
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Readex Pro',
+                                                                            fontSize:
+                                                                                25.0,
+                                                                            fontWeight:
+                                                                                FontWeight.bold,
+                                                                          ),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ],
-                                                            ),
+                                                              ),
+                                                            ],
                                                           ),
                                                         ),
                                                       ),
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
+                                ),
                                 if (FFAppState().condicaoPsquisa != '')
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1258,7 +1266,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: FutureBuilder<
                                                 List<EspecialidadesRow>>(
@@ -1300,7 +1308,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                 return GridView.builder(
                                                   padding: EdgeInsets.zero,
                                                   gridDelegate:
-                                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                                      const SliverGridDelegateWithFixedCrossAxisCount(
                                                     crossAxisCount: 2,
                                                     crossAxisSpacing: 10.0,
                                                     mainAxisSpacing: 10.0,
@@ -1333,7 +1341,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               isScrollControlled:
                                                                   true,
                                                               backgroundColor:
-                                                                  Color(
+                                                                  const Color(
                                                                       0xC2000000),
                                                               enableDrag: false,
                                                               context: context,
@@ -1390,7 +1398,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                             8.0),
                                                               ),
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         10.0,
@@ -1471,7 +1479,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                           opacity: 0.6,
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     1.00, 1.00),
                                                             child: Card(
                                                               clipBehavior: Clip
@@ -1489,7 +1497,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             4.0,
                                                                             4.0,
@@ -1523,7 +1531,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                           opacity: 0.6,
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.00,
                                                                     -1.00),
                                                             child: Card(
@@ -1542,7 +1550,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             4.0,
                                                                             4.0,
@@ -1595,7 +1603,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: FutureBuilder<
                                                 List<EspecialidadesRow>>(
@@ -1636,7 +1644,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                 return GridView.builder(
                                                   padding: EdgeInsets.zero,
                                                   gridDelegate:
-                                                      SliverGridDelegateWithFixedCrossAxisCount(
+                                                      const SliverGridDelegateWithFixedCrossAxisCount(
                                                     crossAxisCount: 2,
                                                     crossAxisSpacing: 10.0,
                                                     mainAxisSpacing: 10.0,
@@ -1669,7 +1677,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               isScrollControlled:
                                                                   true,
                                                               backgroundColor:
-                                                                  Color(
+                                                                  const Color(
                                                                       0xC2000000),
                                                               enableDrag: false,
                                                               context: context,
@@ -1726,7 +1734,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                             8.0),
                                                               ),
                                                               child: Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         10.0,
@@ -1807,7 +1815,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                           opacity: 0.6,
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     1.00, 1.00),
                                                             child: Card(
                                                               clipBehavior: Clip
@@ -1825,7 +1833,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             4.0,
                                                                             4.0,
@@ -1859,7 +1867,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                           opacity: 0.6,
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.00,
                                                                     -1.00),
                                                             child: Card(
@@ -1878,7 +1886,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             4.0,
                                                                             4.0,
@@ -1930,7 +1938,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
               wrapWithModel(
                 model: _model.navBarModel,
                 updateCallback: () => setState(() {}),
-                child: NavBarWidget(),
+                child: const NavBarWidget(),
               ),
             ],
           ),
