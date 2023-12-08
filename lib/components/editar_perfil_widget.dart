@@ -12,14 +12,18 @@ import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'editar_perfil_model.dart';
 export 'editar_perfil_model.dart';
 
 class EditarPerfilWidget extends StatefulWidget {
-  const EditarPerfilWidget({super.key});
+  const EditarPerfilWidget({Key? key}) : super(key: key);
 
   @override
   _EditarPerfilWidgetState createState() => _EditarPerfilWidgetState();
@@ -38,8 +42,8 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
           curve: Curves.bounceOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: const Offset(0.0, 100.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(0.0, 100.0),
+          end: Offset(0.0, 0.0),
         ),
         FadeEffect(
           curve: Curves.easeInOut,
@@ -104,15 +108,15 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 2.0, 16.0, 16.0),
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 2.0, 16.0, 16.0),
               child: Container(
                 width: double.infinity,
-                constraints: const BoxConstraints(
+                constraints: BoxConstraints(
                   maxWidth: 670.0,
                 ),
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
-                  boxShadow: const [
+                  boxShadow: [
                     BoxShadow(
                       blurRadius: 12.0,
                       color: Color(0x1E000000),
@@ -127,7 +131,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 0.0, 0.0),
                       child: Text(
                         'Editar Perfil',
                         style: FlutterFlowTheme.of(context).headlineMedium,
@@ -135,7 +139,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 4.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 4.0, 0.0, 0.0),
                       child: Text(
                         'Atualize seu perfil',
                         style: FlutterFlowTheme.of(context).labelMedium,
@@ -146,7 +150,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 12.0, 16.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -166,41 +170,41 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                 child: Stack(
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           2.0, 2.0, 2.0, 2.0),
                                       child: Container(
                                         width: 90.0,
                                         height: 90.0,
                                         clipBehavior: Clip.antiAlias,
-                                        decoration: const BoxDecoration(
+                                        decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                         ),
                                         child: CachedNetworkImage(
                                           fadeInDuration:
-                                              const Duration(milliseconds: 500),
+                                              Duration(milliseconds: 500),
                                           fadeOutDuration:
-                                              const Duration(milliseconds: 500),
+                                              Duration(milliseconds: 500),
                                           imageUrl: _model.uploadedFileUrl,
                                           fit: BoxFit.fitWidth,
                                         ),
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           2.0, 2.0, 2.0, 2.0),
                                       child: AuthUserStreamWidget(
                                         builder: (context) => Container(
                                           width: 90.0,
                                           height: 90.0,
                                           clipBehavior: Clip.antiAlias,
-                                          decoration: const BoxDecoration(
+                                          decoration: BoxDecoration(
                                             shape: BoxShape.circle,
                                           ),
                                           child: CachedNetworkImage(
                                             fadeInDuration:
-                                                const Duration(milliseconds: 500),
+                                                Duration(milliseconds: 500),
                                             fadeOutDuration:
-                                                const Duration(milliseconds: 500),
+                                                Duration(milliseconds: 500),
                                             imageUrl: currentUserPhoto,
                                             fit: BoxFit.fitWidth,
                                           ),
@@ -289,9 +293,9 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                 text: 'Carregar Imagem',
                                 options: FFButtonOptions(
                                   height: 44.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
@@ -316,11 +320,11 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                   hoverElevation: 3.0,
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 16.0)),
+                            ].divide(SizedBox(width: 16.0)),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 0.0),
                           child: AuthUserStreamWidget(
                             builder: (context) => TextFormField(
@@ -366,7 +370,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                 filled: true,
                                 fillColor: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 24.0, 20.0, 24.0),
                               ),
                               style: FlutterFlowTheme.of(context).bodyMedium,
@@ -377,7 +381,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 0.0),
                           child: AuthUserStreamWidget(
                             builder: (context) => TextFormField(
@@ -424,7 +428,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                 filled: true,
                                 fillColor: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 24.0, 20.0, 24.0),
                               ),
                               style: FlutterFlowTheme.of(context).bodyMedium,
@@ -437,7 +441,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 0.0),
                           child: AuthUserStreamWidget(
                             builder: (context) =>
@@ -497,7 +501,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                       FlutterFlowTheme.of(context).alternate,
                                   borderWidth: 2.0,
                                   borderRadius: 12.0,
-                                  margin: const EdgeInsetsDirectional.fromSTEB(
+                                  margin: EdgeInsetsDirectional.fromSTEB(
                                       16.0, 4.0, 16.0, 4.0),
                                   hidesUnderline: true,
                                   isSearchable: true,
@@ -508,14 +512,14 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 20.0, 16.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 4.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -545,11 +549,11 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                   ],
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 16.0)),
+                            ].divide(SizedBox(width: 16.0)),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 6.0, 16.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -562,14 +566,14 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                       context: context,
                                       isGlobal: true,
                                       avoidOverflow: false,
-                                      targetAnchor: const AlignmentDirectional(
+                                      targetAnchor: AlignmentDirectional(
                                               0.0, 0.0)
                                           .resolve(Directionality.of(context)),
-                                      followerAnchor: const AlignmentDirectional(
+                                      followerAnchor: AlignmentDirectional(
                                               0.0, 0.0)
                                           .resolve(Directionality.of(context)),
                                       builder: (dialogContext) {
-                                        return const Material(
+                                        return Material(
                                           color: Colors.transparent,
                                           child: EditarDataWidget(),
                                         );
@@ -579,9 +583,9 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                   text: 'Editar Data',
                                   options: FFButtonOptions(
                                     height: 40.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -591,7 +595,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                           color: Colors.white,
                                         ),
                                     elevation: 3.0,
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -599,11 +603,11 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 16.0)),
+                            ].divide(SizedBox(width: 16.0)),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 10.0, 16.0, 24.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -615,7 +619,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 4.0, 0.0, 0.0),
                                       child: SelectionArea(
                                           child: Text(
@@ -631,7 +635,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                       )),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 2.0, 0.0, 0.0),
                                       child: AuthUserStreamWidget(
                                         builder: (context) => SelectionArea(
@@ -658,20 +662,20 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                   ],
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 16.0)),
+                            ].divide(SizedBox(width: 16.0)),
                           ),
                         ),
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           24.0, 12.0, 24.0, 24.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.05),
+                            alignment: AlignmentDirectional(0.00, 0.05),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 Navigator.pop(context);
@@ -679,9 +683,9 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                               text: 'Cancelar',
                               options: FFButtonOptions(
                                 height: 44.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
@@ -706,7 +710,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.05),
+                            alignment: AlignmentDirectional(0.00, 0.05),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 await currentUserReference!
@@ -727,7 +731,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                                             color: Colors.white,
                                           ),
                                     ),
-                                    duration: const Duration(milliseconds: 4000),
+                                    duration: Duration(milliseconds: 4000),
                                     backgroundColor:
                                         FlutterFlowTheme.of(context).secondary,
                                   ),
@@ -736,15 +740,15 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                               text: 'Atualizar Perfil',
                               options: FFButtonOptions(
                                 height: 44.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle:
                                     FlutterFlowTheme.of(context).titleSmall,
                                 elevation: 3.0,
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),

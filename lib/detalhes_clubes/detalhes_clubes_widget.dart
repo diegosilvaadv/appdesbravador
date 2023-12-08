@@ -2,18 +2,21 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'detalhes_clubes_model.dart';
 export 'detalhes_clubes_model.dart';
 
 class DetalhesClubesWidget extends StatefulWidget {
   const DetalhesClubesWidget({
-    super.key,
+    Key? key,
     this.detalhesClubes,
-  });
+  }) : super(key: key);
 
   final ClubesRow? detalhesClubes;
 
@@ -42,8 +45,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(0.0, -58.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(0.0, -58.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -61,8 +64,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -80,8 +83,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -99,8 +102,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -118,8 +121,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -137,8 +140,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -156,8 +159,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -175,8 +178,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -194,8 +197,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -213,8 +216,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -232,8 +235,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -251,8 +254,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: const Offset(-49.0, 0.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(-49.0, 0.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -307,7 +310,7 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                   fontSize: 22.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -333,12 +336,12 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                       ),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 5.0),
+                            EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 5.0),
                         child: Container(
                           width: 120.0,
                           height: 120.0,
                           clipBehavior: Clip.antiAlias,
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             shape: BoxShape.circle,
                           ),
                           child: Image.network(
@@ -444,8 +447,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                           ),
                     ),
                   ]
-                      .addToStart(const SizedBox(width: 10.0))
-                      .addToEnd(const SizedBox(width: 10.0)),
+                      .addToStart(SizedBox(width: 10.0))
+                      .addToEnd(SizedBox(width: 10.0)),
                 ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation6']!),
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -464,8 +467,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(width: 10.0))
-                      .addToEnd(const SizedBox(width: 10.0)),
+                      .addToStart(SizedBox(width: 10.0))
+                      .addToEnd(SizedBox(width: 10.0)),
                 ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation7']!),
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -484,8 +487,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(width: 10.0))
-                      .addToEnd(const SizedBox(width: 10.0)),
+                      .addToStart(SizedBox(width: 10.0))
+                      .addToEnd(SizedBox(width: 10.0)),
                 ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation8']!),
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -504,8 +507,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(width: 10.0))
-                      .addToEnd(const SizedBox(width: 10.0)),
+                      .addToStart(SizedBox(width: 10.0))
+                      .addToEnd(SizedBox(width: 10.0)),
                 ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation9']!),
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -524,8 +527,8 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(width: 10.0))
-                      .addToEnd(const SizedBox(width: 10.0)),
+                      .addToStart(SizedBox(width: 10.0))
+                      .addToEnd(SizedBox(width: 10.0)),
                 ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation10']!),
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -544,13 +547,13 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(width: 10.0))
-                      .addToEnd(const SizedBox(width: 10.0)),
+                      .addToStart(SizedBox(width: 10.0))
+                      .addToEnd(SizedBox(width: 10.0)),
                 ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation11']!),
               ]
-                  .divide(const SizedBox(height: 10.0))
-                  .addToStart(const SizedBox(height: 10.0))
-                  .addToEnd(const SizedBox(height: 10.0)),
+                  .divide(SizedBox(height: 10.0))
+                  .addToStart(SizedBox(height: 10.0))
+                  .addToEnd(SizedBox(height: 10.0)),
             ),
           ),
         ),

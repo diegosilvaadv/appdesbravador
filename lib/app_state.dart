@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '/backend/backend.dart';
 import 'backend/supabase/supabase.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 
 class FFAppState extends ChangeNotifier {
@@ -25,14 +26,14 @@ class FFAppState extends ChangeNotifier {
 
   String _condicaoPsquisa = '';
   String get condicaoPsquisa => _condicaoPsquisa;
-  set condicaoPsquisa(String value) {
-    _condicaoPsquisa = value;
+  set condicaoPsquisa(String _value) {
+    _condicaoPsquisa = _value;
   }
 
   int _TagsCondicao = 0;
   int get TagsCondicao => _TagsCondicao;
-  set TagsCondicao(int value) {
-    _TagsCondicao = value;
+  set TagsCondicao(int _value) {
+    _TagsCondicao = _value;
   }
 }
 

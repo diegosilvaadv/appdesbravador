@@ -1,7 +1,15 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_calendar.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'editar_data_widget.dart' show EditarDataWidget;
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class EditarDataModel extends FlutterFlowModel<EditarDataWidget> {
   ///  State fields for stateful widgets in this component.
@@ -11,7 +19,6 @@ class EditarDataModel extends FlutterFlowModel<EditarDataWidget> {
 
   /// Initialization and disposal methods.
 
-  @override
   void initState(BuildContext context) {
     calendarSelectedDay = DateTimeRange(
       start: DateTime.now().startOfDay,
@@ -19,7 +26,6 @@ class EditarDataModel extends FlutterFlowModel<EditarDataWidget> {
     );
   }
 
-  @override
   void dispose() {}
 
   /// Action blocks are added here.

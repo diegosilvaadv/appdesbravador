@@ -2,13 +2,16 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'nav_bar_model.dart';
 export 'nav_bar_model.dart';
 
 class NavBarWidget extends StatefulWidget {
-  const NavBarWidget({super.key});
+  const NavBarWidget({Key? key}) : super(key: key);
 
   @override
   _NavBarWidgetState createState() => _NavBarWidgetState();
@@ -131,7 +134,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
                 context.goNamed(
                   'HomePage',
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: const TransitionInfo(
+                    kTransitionInfoKey: TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.fade,
                       duration: Duration(milliseconds: 0),
@@ -139,7 +142,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
                   },
                 );
               },
-              child: const Icon(
+              child: Icon(
                 Icons.house_rounded,
                 color: Colors.white,
                 size: 40.0,
@@ -147,7 +150,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
             ).animateOnActionTrigger(
               animationsMap['iconOnActionTriggerAnimation1']!,
             ),
-            const Icon(
+            Icon(
               Icons.source,
               color: Color(0xFFCCCCCC),
               size: 40.0,
@@ -163,7 +166,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
                 context.goNamed(
                   'especialidades',
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: const TransitionInfo(
+                    kTransitionInfoKey: TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.fade,
                       duration: Duration(milliseconds: 0),
@@ -179,7 +182,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
                   child: Text(
                     'Minhas\nEspecialidades',
                     textAlign: TextAlign.center,
@@ -188,7 +191,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
                 ),
               ),
             ),
-            const Icon(
+            Icon(
               FFIcons.klogoDesbravadores,
               color: Color(0xFFCCCCCC),
               size: 35.0,
@@ -204,7 +207,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
                 context.pushNamed(
                   'perfil',
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: const TransitionInfo(
+                    kTransitionInfoKey: TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.fade,
                       duration: Duration(milliseconds: 0),
@@ -212,7 +215,7 @@ class _NavBarWidgetState extends State<NavBarWidget>
                   },
                 );
               },
-              child: const Icon(
+              child: Icon(
                 Icons.location_history,
                 color: Color(0xFFCCCCCC),
                 size: 40.0,

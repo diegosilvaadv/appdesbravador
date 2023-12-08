@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/nav_bar_widget.dart';
 import '/components/salvar_especialidade_widget.dart';
@@ -10,6 +11,7 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -18,7 +20,7 @@ import 'especialidades_model.dart';
 export 'especialidades_model.dart';
 
 class EspecialidadesWidget extends StatefulWidget {
-  const EspecialidadesWidget({super.key});
+  const EspecialidadesWidget({Key? key}) : super(key: key);
 
   @override
   _EspecialidadesWidgetState createState() => _EspecialidadesWidgetState();
@@ -77,7 +79,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                   fontSize: 22.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -96,7 +98,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -121,7 +123,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 20.0, 10.0, 20.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -136,7 +138,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                   width: 100.0,
                                                   height: 100.0,
                                                   clipBehavior: Clip.antiAlias,
-                                                  decoration: const BoxDecoration(
+                                                  decoration: BoxDecoration(
                                                     shape: BoxShape.circle,
                                                   ),
                                                   child: Image.network(
@@ -149,7 +151,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 6.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -178,7 +180,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -216,7 +218,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 6.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -257,7 +259,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 6.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -306,7 +308,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 6.0, 0.0, 15.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -341,7 +343,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -362,7 +364,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(6.0, 6.0,
                                                                 6.0, 6.0),
                                                     child: Text(
@@ -394,7 +396,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(6.0, 6.0,
                                                                 6.0, 6.0),
                                                     child: AuthUserStreamWidget(
@@ -455,7 +457,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 10.0, 10.0, 10.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -478,7 +480,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -504,7 +506,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -517,7 +519,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                       'Login',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
-                                                            const TransitionInfo(
+                                                            TransitionInfo(
                                                           hasTransition: true,
                                                           transitionType:
                                                               PageTransitionType
@@ -533,11 +535,11 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                   options: FFButtonOptions(
                                                     height: 40.0,
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 10.0, 0.0),
                                                     iconPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -553,7 +555,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                           fontSize: 16.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: const BorderSide(
+                                                    borderSide: BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -578,7 +580,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                               children: [
                                 if (currentUserEmail != '')
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -594,7 +596,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              borderRadius: const BorderRadius.only(
+                                              borderRadius: BorderRadius.only(
                                                 bottomLeft:
                                                     Radius.circular(0.0),
                                                 bottomRight:
@@ -604,7 +606,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 20.0, 20.0, 20.0),
                                               child: Column(
@@ -620,10 +622,10 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            const BoxDecoration(),
+                                                            BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -667,7 +669,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               return Autocomplete<
                                                                   String>(
                                                                 initialValue:
-                                                                    const TextEditingValue(),
+                                                                    TextEditingValue(),
                                                                 optionsBuilder:
                                                                     (textEditingValue) {
                                                                   if (textEditingValue
@@ -711,7 +713,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                             context)
                                                                         .bodyMedium,
                                                                     textHighlightStyle:
-                                                                        const TextStyle(),
+                                                                        TextStyle(),
                                                                     elevation:
                                                                         4.0,
                                                                     optionBackgroundColor:
@@ -758,7 +760,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                         EasyDebounce
                                                                             .debounce(
                                                                       '_model.textController',
-                                                                      const Duration(
+                                                                      Duration(
                                                                           milliseconds:
                                                                               2000),
                                                                       () async {
@@ -768,6 +770,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                               .search(_model.textController.text)
                                                                               .map((r) => r.object)
                                                                               .toList();
+                                                                          ;
                                                                         });
                                                                         setState(
                                                                             () {
@@ -893,11 +896,11 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.00, 0.00),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   10.0,
@@ -926,11 +929,11 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                         8.0),
                                                           ),
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.00, 0.00),
                                                           child: Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         6.0,
@@ -979,7 +982,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           4.0,
                                                                           10.0,
@@ -1036,7 +1039,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           4.0,
                                                                           10.0,
@@ -1093,7 +1096,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           4.0,
                                                                           10.0,
@@ -1150,7 +1153,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           4.0,
                                                                           10.0,
@@ -1207,7 +1210,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                     ),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           4.0,
                                                                           10.0,
@@ -1255,7 +1258,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: FutureBuilder<
                                                 List<EspecialidadesRow>>(
@@ -1297,7 +1300,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                 return GridView.builder(
                                                   padding: EdgeInsets.zero,
                                                   gridDelegate:
-                                                      const SliverGridDelegateWithFixedCrossAxisCount(
+                                                      SliverGridDelegateWithFixedCrossAxisCount(
                                                     crossAxisCount: 2,
                                                     crossAxisSpacing: 10.0,
                                                     mainAxisSpacing: 10.0,
@@ -1330,7 +1333,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               isScrollControlled:
                                                                   true,
                                                               backgroundColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0xC2000000),
                                                               enableDrag: false,
                                                               context: context,
@@ -1387,7 +1390,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                             8.0),
                                                               ),
                                                               child: Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         10.0,
@@ -1468,7 +1471,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                           opacity: 0.6,
                                                           child: Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     1.00, 1.00),
                                                             child: Card(
                                                               clipBehavior: Clip
@@ -1486,7 +1489,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             4.0,
                                                                             4.0,
@@ -1520,7 +1523,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                           opacity: 0.6,
                                                           child: Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -1.00,
                                                                     -1.00),
                                                             child: Card(
@@ -1539,7 +1542,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             4.0,
                                                                             4.0,
@@ -1592,7 +1595,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: FutureBuilder<
                                                 List<EspecialidadesRow>>(
@@ -1633,7 +1636,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                 return GridView.builder(
                                                   padding: EdgeInsets.zero,
                                                   gridDelegate:
-                                                      const SliverGridDelegateWithFixedCrossAxisCount(
+                                                      SliverGridDelegateWithFixedCrossAxisCount(
                                                     crossAxisCount: 2,
                                                     crossAxisSpacing: 10.0,
                                                     mainAxisSpacing: 10.0,
@@ -1666,7 +1669,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               isScrollControlled:
                                                                   true,
                                                               backgroundColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0xC2000000),
                                                               enableDrag: false,
                                                               context: context,
@@ -1723,7 +1726,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                                             8.0),
                                                               ),
                                                               child: Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         10.0,
@@ -1804,7 +1807,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                           opacity: 0.6,
                                                           child: Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     1.00, 1.00),
                                                             child: Card(
                                                               clipBehavior: Clip
@@ -1822,7 +1825,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             4.0,
                                                                             4.0,
@@ -1856,7 +1859,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                           opacity: 0.6,
                                                           child: Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -1.00,
                                                                     -1.00),
                                                             child: Card(
@@ -1875,7 +1878,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             4.0,
                                                                             4.0,
@@ -1927,7 +1930,7 @@ class _EspecialidadesWidgetState extends State<EspecialidadesWidget> {
               wrapWithModel(
                 model: _model.navBarModel,
                 updateCallback: () => setState(() {}),
-                child: const NavBarWidget(),
+                child: NavBarWidget(),
               ),
             ],
           ),
