@@ -19,3 +19,17 @@ String dataAtualMenosIncion(DateTime dataInicio) {
   final diff = now.year - dataInicio.year;
   return '$diff';
 }
+
+String saudacao() {
+  var hour = DateTime.now().hour;
+  if (hour < 4) {
+    return '🌃Boa Madrugada';
+  }
+  if (hour < 12) {
+    return '🌞Bom dia';
+  }
+  if (hour < 17) {
+    return '😎Boa Tarde';
+  }
+  return '🌚Boa Noite';
+}

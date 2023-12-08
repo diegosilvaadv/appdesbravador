@@ -118,7 +118,7 @@ final parametersBuilderMap =
           'index': getParameter<int>(data, 'index'),
         },
       ),
-  'auth_4_Welcome': ParameterData.none(),
+  'criarconta': ParameterData.none(),
   'auth_4_OnboardingPhoneVerify': (data) async => ParameterData(
         allParams: {
           'phoneNumber': getParameter<String>(data, 'phoneNumber'),
@@ -126,6 +126,7 @@ final parametersBuilderMap =
         },
       ),
   'auth_4_Login': ParameterData.none(),
+  'login': ParameterData.none(),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

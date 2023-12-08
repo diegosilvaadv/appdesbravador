@@ -114,9 +114,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'auth_4_Welcome',
-          path: '/auth4Welcome',
-          builder: (context, params) => const Auth4WelcomeWidget(),
+          name: 'criarconta',
+          path: '/criarconta',
+          builder: (context, params) => const CriarcontaWidget(),
         ),
         FFRoute(
           name: 'auth_4_OnboardingPhoneVerify',
@@ -130,6 +130,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'auth_4_Login',
           path: '/auth4Login',
           builder: (context, params) => const Auth4LoginWidget(),
+        ),
+        FFRoute(
+          name: 'login',
+          path: '/login',
+          builder: (context, params) => const LoginWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

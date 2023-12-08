@@ -4,7 +4,6 @@ import '/components/nav_bar/nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
@@ -183,13 +182,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                               children: [
                                                 SelectionArea(
                                                     child: GradientText(
-                                                  valueOrDefault<String>(
-                                                    currentUserEmail,
-                                                    'email',
-                                                  ).maybeHandleOverflow(
-                                                    maxChars: 15,
-                                                    replacement: '…',
-                                                  ),
+                                                  '@nomedeusuario',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyMedium
@@ -270,23 +263,21 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
                                               children: [
-                                                AuthUserStreamWidget(
-                                                  builder: (context) => Text(
-                                                    valueOrDefault<String>(
-                                                      '${functions.dataAtualMenosIncion(currentUserDocument!.datadeInicioLenco!)} anos de jornada',
-                                                      'anos de jornada',
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          fontSize: 18.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                        ),
+                                                Text(
+                                                  valueOrDefault<String>(
+                                                    ' anos de jornada',
+                                                    'anos de jornada',
                                                   ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        fontSize: 18.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
                                                 ),
                                               ],
                                             ),
@@ -392,7 +383,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                                         .clearRedirectLocation();
 
                                                     context.goNamedAuth(
-                                                      'auth_4_Login',
+                                                      'criarconta',
                                                       context.mounted,
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
@@ -528,7 +519,7 @@ class _PerfilWidgetState extends State<PerfilWidget> {
                                                 FFButtonWidget(
                                                   onPressed: () async {
                                                     context.pushNamed(
-                                                      'auth_4_Welcome',
+                                                      'criarconta',
                                                       extra: <String, dynamic>{
                                                         kTransitionInfoKey:
                                                             const TransitionInfo(

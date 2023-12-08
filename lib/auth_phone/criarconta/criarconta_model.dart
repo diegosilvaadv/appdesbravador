@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'auth4_welcome_widget.dart' show Auth4WelcomeWidget;
+import 'criarconta_widget.dart' show CriarcontaWidget;
 import 'package:flutter/material.dart';
 
-class Auth4WelcomeModel extends FlutterFlowModel<Auth4WelcomeWidget> {
+class CriarcontaModel extends FlutterFlowModel<CriarcontaWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
