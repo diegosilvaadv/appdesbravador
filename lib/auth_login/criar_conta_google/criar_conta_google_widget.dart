@@ -14,11 +14,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
-import 'criar_conta_cell_model.dart';
-export 'criar_conta_cell_model.dart';
+import 'criar_conta_google_model.dart';
+export 'criar_conta_google_model.dart';
 
-class CriarContaCellWidget extends StatefulWidget {
-  const CriarContaCellWidget({
+class CriarContaGoogleWidget extends StatefulWidget {
+  const CriarContaGoogleWidget({
     super.key,
     int? index,
   })  : index = index ?? 0;
@@ -26,12 +26,12 @@ class CriarContaCellWidget extends StatefulWidget {
   final int index;
 
   @override
-  _CriarContaCellWidgetState createState() => _CriarContaCellWidgetState();
+  _CriarContaGoogleWidgetState createState() => _CriarContaGoogleWidgetState();
 }
 
-class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
+class _CriarContaGoogleWidgetState extends State<CriarContaGoogleWidget>
     with TickerProviderStateMixin {
-  late CriarContaCellModel _model;
+  late CriarContaGoogleModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -138,9 +138,78 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
         ),
       ],
     ),
+    'textFieldOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        VisibilityEffect(duration: 300.ms),
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
+        ),
+        TiltEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
+        ),
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+    'textFieldOnPageLoadAnimation3': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        VisibilityEffect(duration: 300.ms),
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
+        ),
+        TiltEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
+        ),
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
     'containerOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
+        VisibilityEffect(duration: 300.ms),
         FadeEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
@@ -239,108 +308,6 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
         ),
       ],
     ),
-    'textFieldOnPageLoadAnimation2': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 300.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.0, 40.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.349, 0),
-          end: const Offset(0, 0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.9, 0.9),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
-    'textFieldOnPageLoadAnimation3': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 300.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.0, 40.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.349, 0),
-          end: const Offset(0, 0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.9, 0.9),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
-    'textFieldOnPageLoadAnimation4': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 300.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.0, 40.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.349, 0),
-          end: const Offset(0, 0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.9, 0.9),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
     'containerOnPageLoadAnimation2': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
@@ -369,6 +336,40 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 300.ms,
+          duration: 400.ms,
+          begin: const Offset(0.9, 0.9),
+          end: const Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+    'buttonOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        VisibilityEffect(duration: 350.ms),
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 350.ms,
+          duration: 400.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 350.ms,
+          duration: 400.ms,
+          begin: const Offset(0.0, 40.0),
+          end: const Offset(0.0, 0.0),
+        ),
+        TiltEffect(
+          curve: Curves.easeInOut,
+          delay: 350.ms,
+          duration: 400.ms,
+          begin: const Offset(0.349, 0),
+          end: const Offset(0, 0),
+        ),
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 350.ms,
           duration: 400.ms,
           begin: const Offset(0.9, 0.9),
           end: const Offset(1.0, 1.0),
@@ -477,40 +478,6 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
         ),
       ],
     ),
-    'buttonOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 350.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 350.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 350.ms,
-          duration: 400.ms,
-          begin: const Offset(0.0, 40.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 350.ms,
-          duration: 400.ms,
-          begin: const Offset(0.349, 0),
-          end: const Offset(0, 0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 350.ms,
-          duration: 400.ms,
-          begin: const Offset(0.9, 0.9),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
     'textOnPageLoadAnimation7': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
@@ -613,118 +580,13 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
         ),
       ],
     ),
-    'textOnPageLoadAnimation9': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 100.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 100.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 100.ms,
-          duration: 400.ms,
-          begin: const Offset(0.0, 40.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 100.ms,
-          duration: 400.ms,
-          begin: const Offset(0.349, 0),
-          end: const Offset(0, 0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 100.ms,
-          duration: 400.ms,
-          begin: const Offset(0.9, 0.9),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
-    'textOnPageLoadAnimation10': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 200.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 200.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 200.ms,
-          duration: 400.ms,
-          begin: const Offset(0.0, 40.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 200.ms,
-          duration: 400.ms,
-          begin: const Offset(0.349, 0),
-          end: const Offset(0, 0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 200.ms,
-          duration: 400.ms,
-          begin: const Offset(0.9, 0.9),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
-    'containerOnPageLoadAnimation5': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 300.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.0, 40.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.349, 0),
-          end: const Offset(0, 0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 400.ms,
-          begin: const Offset(0.9, 0.9),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
   };
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CriarContaCellModel());
+    _model = createModel(context, () => CriarContaGoogleModel());
 
-    _model.phoneNumberController ??= TextEditingController();
-    _model.phoneNumberFocusNode ??= FocusNode();
-    _model.phoneNumberFocusNode!.addListener(() => setState(() {}));
     _model.yourNameController1 ??= TextEditingController();
     _model.yourNameFocusNode1 ??= FocusNode();
 
@@ -733,8 +595,6 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
 
     _model.yourNameController2 ??= TextEditingController();
     _model.yourNameFocusNode2 ??= FocusNode();
-
-    authManager.handlePhoneAuthStateChanges(context);
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -820,226 +680,11 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                             widget.index,
                                             0,
                                           ),
-                                          4)),
+                                          3)),
                               scrollDirection: Axis.horizontal,
                               children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      24.0, 0.0, 24.0, 0.0),
-                                  child: SingleChildScrollView(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 32.0, 0.0, 8.0),
-                                          child: Text(
-                                            'Digite Número',
-                                            textAlign: TextAlign.start,
-                                            style: FlutterFlowTheme.of(context)
-                                                .displayMedium
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  fontSize: 35.0,
-                                                ),
-                                          ).animateOnPageLoad(animationsMap[
-                                              'textOnPageLoadAnimation1']!),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 4.0, 0.0, 8.0),
-                                          child: Text(
-                                            'Digite seu número de celular para começar a criar seu perfil.',
-                                            textAlign: TextAlign.start,
-                                            style: FlutterFlowTheme.of(context)
-                                                .labelLarge,
-                                          ).animateOnPageLoad(animationsMap[
-                                              'textOnPageLoadAnimation2']!),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 12.0, 0.0, 0.0),
-                                          child: TextFormField(
-                                            controller:
-                                                _model.phoneNumberController,
-                                            focusNode:
-                                                _model.phoneNumberFocusNode,
-                                            autofillHints: const [
-                                              AutofillHints.telephoneNumber
-                                            ],
-                                            obscureText: false,
-                                            decoration: InputDecoration(
-                                              labelText: 'Número do Celular',
-                                              labelStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        fontSize: 18.0,
-                                                      ),
-                                              errorStyle: FlutterFlowTheme.of(
-                                                      context)
-                                                  .labelSmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .error,
-                                                    lineHeight: 3.0,
-                                                  ),
-                                              enabledBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .alternate,
-                                                  width: 2.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                              ),
-                                              focusedBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
-                                                  width: 2.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                              ),
-                                              errorBorder: UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .error,
-                                                  width: 2.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                              ),
-                                              focusedErrorBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .error,
-                                                  width: 2.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                              ),
-                                              filled: true,
-                                              fillColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryBackground,
-                                              contentPadding:
-                                                  const EdgeInsetsDirectional
-                                                      .fromSTEB(16.0, 16.0,
-                                                          16.0, 8.0),
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyLarge
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 18.0,
-                                                  lineHeight: 2.0,
-                                                ),
-                                            keyboardType: TextInputType.phone,
-                                            cursorColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primary,
-                                            validator: _model
-                                                .phoneNumberControllerValidator
-                                                .asValidator(context),
-                                            inputFormatters: [
-                                              _model.phoneNumberMask
-                                            ],
-                                          ).animateOnPageLoad(animationsMap[
-                                              'textFieldOnPageLoadAnimation1']!),
-                                        ),
-                                        if ((_model.phoneNumberFocusNode
-                                                ?.hasFocus ??
-                                            false))
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 24.0, 0.0, 0.0),
-                                            child: Container(
-                                              width: double.infinity,
-                                              constraints: const BoxConstraints(
-                                                maxWidth: 600.0,
-                                              ),
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .accent2,
-                                                borderRadius:
-                                                    BorderRadius.circular(12.0),
-                                                border: Border.all(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondary,
-                                                  width: 2.0,
-                                                ),
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 12.0, 12.0, 12.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      'Enviaremos um código de 6 dígitos para você!',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                          ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  4.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        'Você terminará em pouco tempo...',
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelSmall,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ).animateOnPageLoad(animationsMap[
-                                                'containerOnPageLoadAnimation1']!),
-                                          ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
                                 Form(
-                                  key: _model.formKey3,
+                                  key: _model.formKey1,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1065,7 +710,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                         fontSize: 35.0,
                                                       ),
                                             ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation3']!),
+                                                'textOnPageLoadAnimation1']!),
                                           ),
                                           Padding(
                                             padding:
@@ -1078,127 +723,139 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                   FlutterFlowTheme.of(context)
                                                       .labelLarge,
                                             ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation4']!),
+                                                'textOnPageLoadAnimation2']!),
                                           ),
                                           Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 12.0, 0.0, 0.0),
-                                            child: TextFormField(
-                                              controller:
-                                                  _model.yourNameController1,
-                                              focusNode:
-                                                  _model.yourNameFocusNode1,
-                                              autofillHints: const [
-                                                AutofillHints.name
-                                              ],
-                                              obscureText: false,
-                                              decoration: InputDecoration(
-                                                labelText: 'Seu Nome',
-                                                labelStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelLarge,
-                                                errorStyle: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodySmall
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
+                                            child: AuthUserStreamWidget(
+                                              builder: (context) =>
+                                                  TextFormField(
+                                                controller:
+                                                    _model.yourNameController1,
+                                                focusNode:
+                                                    _model.yourNameFocusNode1,
+                                                autofillHints: const [
+                                                  AutofillHints.name
+                                                ],
+                                                obscureText: false,
+                                                decoration: InputDecoration(
+                                                  labelText:
+                                                      currentUserDisplayName,
+                                                  labelStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelLarge,
+                                                  errorStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .bodySmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .error,
+                                                        lineHeight: 3.0,
+                                                      ),
+                                                  enabledBorder:
+                                                      UnderlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .alternate,
+                                                      width: 2.0,
+                                                    ),
+                                                    borderRadius:
+                                                        const BorderRadius.only(
+                                                      topLeft:
+                                                          Radius.circular(4.0),
+                                                      topRight:
+                                                          Radius.circular(4.0),
+                                                    ),
+                                                  ),
+                                                  focusedBorder:
+                                                      UnderlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                      width: 2.0,
+                                                    ),
+                                                    borderRadius:
+                                                        const BorderRadius.only(
+                                                      topLeft:
+                                                          Radius.circular(4.0),
+                                                      topRight:
+                                                          Radius.circular(4.0),
+                                                    ),
+                                                  ),
+                                                  errorBorder:
+                                                      UnderlineInputBorder(
+                                                    borderSide: BorderSide(
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .error,
-                                                      lineHeight: 3.0,
+                                                      width: 2.0,
                                                     ),
-                                                enabledBorder:
-                                                    UnderlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .alternate,
-                                                    width: 2.0,
+                                                    borderRadius:
+                                                        const BorderRadius.only(
+                                                      topLeft:
+                                                          Radius.circular(4.0),
+                                                      topRight:
+                                                          Radius.circular(4.0),
+                                                    ),
                                                   ),
-                                                  borderRadius:
-                                                      const BorderRadius.only(
-                                                    topLeft:
-                                                        Radius.circular(4.0),
-                                                    topRight:
-                                                        Radius.circular(4.0),
+                                                  focusedErrorBorder:
+                                                      UnderlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .error,
+                                                      width: 2.0,
+                                                    ),
+                                                    borderRadius:
+                                                        const BorderRadius.only(
+                                                      topLeft:
+                                                          Radius.circular(4.0),
+                                                      topRight:
+                                                          Radius.circular(4.0),
+                                                    ),
                                                   ),
+                                                  filled: true,
+                                                  fillColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .secondaryBackground,
+                                                  contentPadding:
+                                                      const EdgeInsetsDirectional
+                                                          .fromSTEB(0.0, 16.0,
+                                                              16.0, 8.0),
                                                 ),
-                                                focusedBorder:
-                                                    UnderlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primary,
-                                                    width: 2.0,
-                                                  ),
-                                                  borderRadius:
-                                                      const BorderRadius.only(
-                                                    topLeft:
-                                                        Radius.circular(4.0),
-                                                    topRight:
-                                                        Radius.circular(4.0),
-                                                  ),
-                                                ),
-                                                errorBorder:
-                                                    UnderlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .error,
-                                                    width: 2.0,
-                                                  ),
-                                                  borderRadius:
-                                                      const BorderRadius.only(
-                                                    topLeft:
-                                                        Radius.circular(4.0),
-                                                    topRight:
-                                                        Radius.circular(4.0),
-                                                  ),
-                                                ),
-                                                focusedErrorBorder:
-                                                    UnderlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .error,
-                                                    width: 2.0,
-                                                  ),
-                                                  borderRadius:
-                                                      const BorderRadius.only(
-                                                    topLeft:
-                                                        Radius.circular(4.0),
-                                                    topRight:
-                                                        Radius.circular(4.0),
-                                                  ),
-                                                ),
-                                                filled: true,
-                                                fillColor:
+                                                style:
                                                     FlutterFlowTheme.of(context)
-                                                        .secondaryBackground,
-                                                contentPadding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(0.0, 16.0,
-                                                            16.0, 8.0),
-                                              ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        lineHeight: 2.0,
-                                                      ),
-                                              keyboardType: TextInputType.name,
-                                              cursorColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              validator: _model
-                                                  .yourNameController1Validator
-                                                  .asValidator(context),
-                                            ).animateOnPageLoad(animationsMap[
-                                                'textFieldOnPageLoadAnimation2']!),
+                                                        .bodyLarge
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          lineHeight: 2.0,
+                                                        ),
+                                                keyboardType:
+                                                    TextInputType.name,
+                                                cursorColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                validator: _model
+                                                    .yourNameController1Validator
+                                                    .asValidator(context),
+                                              ).animateOnPageLoad(animationsMap[
+                                                      'textFieldOnPageLoadAnimation1']!),
+                                            ),
                                           ),
                                           Padding(
                                             padding:
@@ -1332,7 +989,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                 _model.usernameMask
                                               ],
                                             ).animateOnPageLoad(animationsMap[
-                                                'textFieldOnPageLoadAnimation3']!),
+                                                'textFieldOnPageLoadAnimation2']!),
                                           ),
                                           Padding(
                                             padding:
@@ -1463,7 +1120,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                   .yourNameController2Validator
                                                   .asValidator(context),
                                             ).animateOnPageLoad(animationsMap[
-                                                'textFieldOnPageLoadAnimation4']!),
+                                                'textFieldOnPageLoadAnimation3']!),
                                           ),
                                           Padding(
                                             padding:
@@ -1590,7 +1247,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                 ),
                                               ),
                                             ).animateOnPageLoad(animationsMap[
-                                                'containerOnPageLoadAnimation2']!),
+                                                'containerOnPageLoadAnimation1']!),
                                           ),
                                         ],
                                       ),
@@ -1598,7 +1255,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                   ),
                                 ),
                                 Form(
-                                  key: _model.formKey1,
+                                  key: _model.formKey2,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1624,7 +1281,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                         fontSize: 35.0,
                                                       ),
                                             ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation5']!),
+                                                'textOnPageLoadAnimation3']!),
                                           ),
                                           Padding(
                                             padding:
@@ -1637,7 +1294,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                   FlutterFlowTheme.of(context)
                                                       .labelLarge,
                                             ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation6']!),
+                                                'textOnPageLoadAnimation4']!),
                                           ),
                                           Align(
                                             alignment: const AlignmentDirectional(
@@ -1744,7 +1401,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                   ),
                                                 ),
                                               ).animateOnPageLoad(animationsMap[
-                                                  'containerOnPageLoadAnimation3']!),
+                                                  'containerOnPageLoadAnimation2']!),
                                             ),
                                           ),
                                           Align(
@@ -1896,7 +1553,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                   ),
                                 ),
                                 Form(
-                                  key: _model.formKey2,
+                                  key: _model.formKey3,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1922,7 +1579,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                         fontSize: 35.0,
                                                       ),
                                             ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation7']!),
+                                                'textOnPageLoadAnimation5']!),
                                           ),
                                           Padding(
                                             padding:
@@ -1935,7 +1592,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                   FlutterFlowTheme.of(context)
                                                       .labelLarge,
                                             ).animateOnPageLoad(animationsMap[
-                                                'textOnPageLoadAnimation8']!),
+                                                'textOnPageLoadAnimation6']!),
                                           ),
                                           InkWell(
                                             splashColor: Colors.transparent,
@@ -2075,7 +1732,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                               ),
                                             ),
                                           ).animateOnPageLoad(animationsMap[
-                                              'containerOnPageLoadAnimation4']!),
+                                              'containerOnPageLoadAnimation3']!),
                                         ],
                                       ),
                                     ),
@@ -2100,7 +1757,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                             style: FlutterFlowTheme.of(context)
                                                 .displayMedium,
                                           ).animateOnPageLoad(animationsMap[
-                                              'textOnPageLoadAnimation9']!),
+                                              'textOnPageLoadAnimation7']!),
                                         ),
                                         Padding(
                                           padding:
@@ -2112,7 +1769,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                             style: FlutterFlowTheme.of(context)
                                                 .labelLarge,
                                           ).animateOnPageLoad(animationsMap[
-                                              'textOnPageLoadAnimation10']!),
+                                              'textOnPageLoadAnimation8']!),
                                         ),
                                         Align(
                                           alignment: const AlignmentDirectional(
@@ -2160,7 +1817,7 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                                 ),
                                               ),
                                             ).animateOnPageLoad(animationsMap[
-                                                'containerOnPageLoadAnimation5']!),
+                                                'containerOnPageLoadAnimation4']!),
                                           ),
                                         ),
                                         Padding(
@@ -2278,8 +1935,8 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                               widget.index,
                                               0,
                                             ),
-                                            4)),
-                                count: 5,
+                                            3)),
+                                count: 4,
                                 axisDirection: Axis.horizontal,
                                 onDotClicked: (i) async {
                                   await _model.pageViewController!
@@ -2371,42 +2028,8 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                           child: FFButtonWidget(
                             onPressed: () async {
                               if (_model.pageViewCurrentIndex == 0) {
-                                final phoneNumberVal =
-                                    _model.phoneNumberController.text;
-                                if (phoneNumberVal.isEmpty ||
-                                    !phoneNumberVal.startsWith('+')) {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                      content: Text(
-                                          'Phone Number is required and has to start with +.'),
-                                    ),
-                                  );
-                                  return;
-                                }
-                                await authManager.beginPhoneAuth(
-                                  context: context,
-                                  phoneNumber: phoneNumberVal,
-                                  onCodeSent: (context) async {
-                                    context.goNamedAuth(
-                                      'PhoneVerify',
-                                      context.mounted,
-                                      queryParameters: {
-                                        'phoneNumber': serializeParam(
-                                          _model.phoneNumberController.text,
-                                          ParamType.String,
-                                        ),
-                                        'isLogin': serializeParam(
-                                          false,
-                                          ParamType.bool,
-                                        ),
-                                      }.withoutNulls,
-                                      ignoreRedirect: true,
-                                    );
-                                  },
-                                );
-                              } else if (_model.pageViewCurrentIndex == 1) {
-                                if (_model.formKey3.currentState == null ||
-                                    !_model.formKey3.currentState!.validate()) {
+                                if (_model.formKey1.currentState == null ||
+                                    !_model.formKey1.currentState!.validate()) {
                                   return;
                                 }
                                 // controlPageView
@@ -2414,9 +2037,9 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                   duration: const Duration(milliseconds: 300),
                                   curve: Curves.ease,
                                 );
-                              } else if (_model.pageViewCurrentIndex == 2) {
-                                if (_model.formKey1.currentState == null ||
-                                    !_model.formKey1.currentState!.validate()) {
+                              } else if (_model.pageViewCurrentIndex == 1) {
+                                if (_model.formKey2.currentState == null ||
+                                    !_model.formKey2.currentState!.validate()) {
                                   return;
                                 }
                                 if ((_model.uploadedLocalFile.bytes ?? [])
@@ -2446,9 +2069,9 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                   duration: const Duration(milliseconds: 300),
                                   curve: Curves.ease,
                                 );
-                              } else if (_model.pageViewCurrentIndex == 3) {
-                                if (_model.formKey2.currentState == null ||
-                                    !_model.formKey2.currentState!.validate()) {
+                              } else if (_model.pageViewCurrentIndex == 2) {
+                                if (_model.formKey3.currentState == null ||
+                                    !_model.formKey3.currentState!.validate()) {
                                   return;
                                 }
                                 if (_model.datePicked == null) {
@@ -2484,16 +2107,12 @@ class _CriarContaCellWidgetState extends State<CriarContaCellWidget>
                                     .update(createUsersRecordData(
                                   displayName: _model.yourNameController1.text,
                                   photoUrl: _model.uploadedFileUrl,
-                                  lastActiveTime: getCurrentTimestamp,
-                                  phoneNumber:
-                                      _model.phoneNumberController.text,
-                                  title: _model.usernameController.text,
-                                  createdTime: getCurrentTimestamp,
-                                  sobrevoce: _model.yourNameController2.text,
                                   especConcluidas: 0,
-                                  creatPerfil: getCurrentTimestamp,
                                   datadeInicioLenco: _model.datePicked,
-                                  meuClube: 'Sem Clube',
+                                  meuClube: 'sem clube',
+                                  creatPerfil: getCurrentTimestamp,
+                                  sobrevoce: _model.yourNameController2.text,
+                                  title: _model.usernameController.text,
                                   diretorClube: _model.checkboxValue,
                                 ));
                                 ScaffoldMessenger.of(context).showSnackBar(

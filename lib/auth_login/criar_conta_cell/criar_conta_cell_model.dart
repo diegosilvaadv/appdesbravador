@@ -38,11 +38,15 @@ class CriarContaCellModel extends FlutterFlowModel<CriarContaCellWidget> {
   // State field(s) for username widget.
   FocusNode? usernameFocusNode;
   TextEditingController? usernameController;
+  final usernameMask =
+      MaskTextInputFormatter(mask: '@#######################################');
   String? Function(BuildContext, String?)? usernameControllerValidator;
   // State field(s) for yourName widget.
   FocusNode? yourNameFocusNode2;
   TextEditingController? yourNameController2;
   String? Function(BuildContext, String?)? yourNameController2Validator;
+  // State field(s) for Checkbox widget.
+  bool? checkboxValue;
   bool isDataUploading = false;
   FFUploadedFile uploadedLocalFile =
       FFUploadedFile(bytes: Uint8List.fromList([]));

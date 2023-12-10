@@ -530,14 +530,8 @@ class _CriarcontaWidgetState extends State<CriarcontaWidget>
                             if (user == null) {
                               return;
                             }
-                            if (valueOrDefault(
-                                    currentUserDocument?.meuClube, '') !=
-                                '') {
-                              context.pushNamedAuth(
-                                  'criarconta', context.mounted);
-                            } else {
-                              context.goNamedAuth('HomePage', context.mounted);
-                            }
+
+                            context.goNamedAuth('HomePage', context.mounted);
                           },
                           text: 'Criar com  Google',
                           icon: FaIcon(

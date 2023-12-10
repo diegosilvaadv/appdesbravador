@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/backend/supabase/supabase.dart';
 import '/auth/base_auth_user_provider.dart';
@@ -9,7 +10,6 @@ import '/auth/base_auth_user_provider.dart';
 import '/backend/push_notifications/push_notifications_handler.dart'
     show PushNotificationsHandler;
 import '/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -75,13 +75,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomePageWidget() : const HomePageWidget(),
+          appStateNotifier.loggedIn ? const HomePageWidget() : const CriarcontaWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const HomePageWidget() : const HomePageWidget(),
+              appStateNotifier.loggedIn ? const HomePageWidget() : const CriarcontaWidget(),
         ),
         FFRoute(
           name: 'HomePage',
@@ -142,6 +142,43 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => CriarContaEmailWidget(
             index: params.getParam('index', ParamType.int),
           ),
+        ),
+        FFRoute(
+          name: 'criarContaGoogle',
+          path: '/criarContaGoogle',
+          builder: (context, params) => CriarContaGoogleWidget(
+            index: params.getParam('index', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'EntrarComEmail',
+          path: '/entrarComEmail',
+          builder: (context, params) => const EntrarComEmailWidget(),
+        ),
+        FFRoute(
+          name: 'meuClube',
+          path: '/meuClube',
+          builder: (context, params) => const MeuClubeWidget(),
+        ),
+        FFRoute(
+          name: 'editarClube',
+          path: '/editarClube',
+          asyncParams: {
+            'clubeRef': getDoc(['clubes'], ClubesRecord.fromSnapshot),
+          },
+          builder: (context, params) => EditarClubeWidget(
+            clubeRef: params.getParam('clubeRef', ParamType.Document),
+          ),
+        ),
+        FFRoute(
+          name: 'EspecialidadesConcluidas',
+          path: '/especialidadesConcluidas',
+          builder: (context, params) => const EspecialidadesConcluidasWidget(),
+        ),
+        FFRoute(
+          name: 'CriarClube',
+          path: '/criarClube',
+          builder: (context, params) => const CriarClubeWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -308,7 +345,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/homePage';
+            return '/criarconta';
           }
           return null;
         },
@@ -321,15 +358,11 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Center(
-                  child: SizedBox(
-                    width: 50.0,
-                    height: 50.0,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
-                      ),
-                    ),
+              ? Container(
+                  color: const Color(0x79000000),
+                  child: Image.asset(
+                    'assets/images/Design_sem_nome_(7).png',
+                    fit: BoxFit.cover,
                   ),
                 )
               : PushNotificationsHandler(child: page);

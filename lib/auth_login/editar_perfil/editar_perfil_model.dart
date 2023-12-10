@@ -22,6 +22,7 @@ class EditarPerfilModel extends FlutterFlowModel<EditarPerfilWidget> {
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
+  DateTime? datePicked;
 
   /// Initialization and disposal methods.
 

@@ -5,8 +5,8 @@ import '../base_auth_user_provider.dart';
 
 export '../base_auth_user_provider.dart';
 
-class EuSouDesbravadoresFirebaseUser extends BaseAuthUser {
-  EuSouDesbravadoresFirebaseUser(this.user);
+class EuSouDesbravadorFirebaseUser extends BaseAuthUser {
+  EuSouDesbravadorFirebaseUser(this.user);
   User? user;
   @override
   bool get loggedIn => user != null;
@@ -55,10 +55,10 @@ class EuSouDesbravadoresFirebaseUser extends BaseAuthUser {
   static BaseAuthUser fromUserCredential(UserCredential userCredential) =>
       fromFirebaseUser(userCredential.user);
   static BaseAuthUser fromFirebaseUser(User? user) =>
-      EuSouDesbravadoresFirebaseUser(user);
+      EuSouDesbravadorFirebaseUser(user);
 }
 
-Stream<BaseAuthUser> euSouDesbravadoresFirebaseUserStream() =>
+Stream<BaseAuthUser> euSouDesbravadorFirebaseUserStream() =>
     FirebaseAuth.instance
         .authStateChanges()
         .debounce((user) => user == null && !loggedIn
@@ -66,7 +66,7 @@ Stream<BaseAuthUser> euSouDesbravadoresFirebaseUserStream() =>
             : Stream.value(user))
         .map<BaseAuthUser>(
       (user) {
-        currentUser = EuSouDesbravadoresFirebaseUser(user);
+        currentUser = EuSouDesbravadorFirebaseUser(user);
         return currentUser!;
       },
     );

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'serialization_util.dart';
-import '../../flutter_flow/flutter_flow_theme.dart';
+import '../backend.dart';
 import '../../flutter_flow/flutter_flow_util.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
@@ -72,15 +72,11 @@ class _PushNotificationsHandlerState extends State<PushNotificationsHandler> {
 
   @override
   Widget build(BuildContext context) => _loading
-      ? Center(
-          child: SizedBox(
-            width: 50.0,
-            height: 50.0,
-            child: CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(
-                FlutterFlowTheme.of(context).primary,
-              ),
-            ),
+      ? Container(
+          color: const Color(0x79000000),
+          child: Image.asset(
+            'assets/images/Design_sem_nome_(7).png',
+            fit: BoxFit.cover,
           ),
         )
       : widget.child;
@@ -132,6 +128,21 @@ final parametersBuilderMap =
           'index': getParameter<int>(data, 'index'),
         },
       ),
+  'criarContaGoogle': (data) async => ParameterData(
+        allParams: {
+          'index': getParameter<int>(data, 'index'),
+        },
+      ),
+  'EntrarComEmail': ParameterData.none(),
+  'meuClube': ParameterData.none(),
+  'editarClube': (data) async => ParameterData(
+        allParams: {
+          'clubeRef': await getDocumentParameter<ClubesRecord>(
+              data, 'clubeRef', ClubesRecord.fromSnapshot),
+        },
+      ),
+  'EspecialidadesConcluidas': ParameterData.none(),
+  'CriarClube': ParameterData.none(),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

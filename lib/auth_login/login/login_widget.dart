@@ -570,14 +570,15 @@ class _LoginWidgetState extends State<LoginWidget>
                             20.0, 12.0, 20.0, 12.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            GoRouter.of(context).prepareAuthEvent();
-                            final user =
-                                await authManager.signInWithGoogle(context);
-                            if (user == null) {
-                              return;
-                            }
-
-                            context.goNamedAuth('HomePage', context.mounted);
+                            context.pushNamed(
+                              'EntrarComEmail',
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: const TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType: PageTransitionType.fade,
+                                ),
+                              },
+                            );
                           },
                           text: 'Entrar com E-mail',
                           icon: Icon(
@@ -636,11 +637,11 @@ class _LoginWidgetState extends State<LoginWidget>
                             text: TextSpan(
                               children: [
                                 const TextSpan(
-                                  text: 'Já tem uma conta? ',
+                                  text: 'Não tem uma conta? ',
                                   style: TextStyle(),
                                 ),
                                 TextSpan(
-                                  text: 'Entrar Aqui',
+                                  text: 'Criar Conta Aqui',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
                                       .override(

@@ -2,6 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -341,10 +342,12 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                           decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                           ),
-                          child: Image.network(
-                            valueOrDefault<String>(
+                          child: CachedNetworkImage(
+                            fadeInDuration: const Duration(milliseconds: 200),
+                            fadeOutDuration: const Duration(milliseconds: 200),
+                            imageUrl: valueOrDefault<String>(
                               widget.detalhesClubes?.brazao,
-                              'semimagem',
+                              'https://gthmauklpdygyjahreur.supabase.co/storage/v1/object/public/templates/fotosDesbravadores/Design%20sem%20nome%20(7).png',
                             ),
                             fit: BoxFit.cover,
                           ),
@@ -357,16 +360,18 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      valueOrDefault<String>(
-                        widget.detalhesClubes?.sobre,
-                        'sobre',
+                    Flexible(
+                      child: Text(
+                        valueOrDefault<String>(
+                          widget.detalhesClubes?.sobre,
+                          'sobre',
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w500,
+                            ),
                       ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w500,
-                          ),
                     ),
                   ],
                 ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation2']!),
@@ -398,16 +403,18 @@ class _DetalhesClubesWidgetState extends State<DetalhesClubesWidget>
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      valueOrDefault<String>(
-                        widget.detalhesClubes?.endereco,
-                        'endereço',
+                    Flexible(
+                      child: Text(
+                        valueOrDefault<String>(
+                          widget.detalhesClubes?.endereco,
+                          'endereço',
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w300,
+                            ),
                       ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w300,
-                          ),
                     ),
                   ],
                 ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation4']!),

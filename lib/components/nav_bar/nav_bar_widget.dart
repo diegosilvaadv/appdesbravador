@@ -188,10 +188,28 @@ class _NavBarWidgetState extends State<NavBarWidget>
                 ),
               ),
             ),
-            const Icon(
-              FFIcons.klogoDesbravadores,
-              color: Color(0xFFCCCCCC),
-              size: 35.0,
+            InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              onTap: () async {
+                context.pushNamed(
+                  'meuClube',
+                  extra: <String, dynamic>{
+                    kTransitionInfoKey: const TransitionInfo(
+                      hasTransition: true,
+                      transitionType: PageTransitionType.fade,
+                      duration: Duration(milliseconds: 0),
+                    ),
+                  },
+                );
+              },
+              child: const Icon(
+                FFIcons.klogoDesbravadores,
+                color: Color(0xFFCCCCCC),
+                size: 35.0,
+              ),
             ).animateOnActionTrigger(
               animationsMap['iconOnActionTriggerAnimation3']!,
             ),

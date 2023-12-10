@@ -256,27 +256,30 @@ class _PhoneVerifyWidgetState extends State<PhoneVerifyWidget>
                       children: [
                         FFButtonWidget(
                           onPressed: () async {
-                            if (widget.isLogin == true) {
-                              GoRouter.of(context).prepareAuthEvent();
-                              final smsCodeVal = _model.pinCodeController!.text;
-                              if (smsCodeVal.isEmpty) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content:
-                                        Text('Enter SMS verification code.'),
-                                  ),
-                                );
-                                return;
-                              }
-                              final phoneVerifiedUser =
-                                  await authManager.verifySmsCode(
-                                context: context,
-                                smsCode: smsCodeVal,
+                            GoRouter.of(context).prepareAuthEvent();
+                            final smsCodeVal = _model.pinCodeController!.text;
+                            if (smsCodeVal.isEmpty) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text('Enter SMS verification code.'),
+                                ),
                               );
-                              if (phoneVerifiedUser == null) {
-                                return;
-                              }
+                              return;
+                            }
+                            final phoneVerifiedUser =
+                                await authManager.verifySmsCode(
+                              context: context,
+                              smsCode: smsCodeVal,
+                            );
+                            if (phoneVerifiedUser == null) {
+                              return;
+                            }
 
+                            await Future.delayed(
+                                const Duration(milliseconds: 2000));
+                            if (valueOrDefault(
+                                    currentUserDocument?.meuClube, '') !=
+                                '') {
                               context.goNamedAuth(
                                 'HomePage',
                                 context.mounted,
@@ -288,26 +291,6 @@ class _PhoneVerifyWidgetState extends State<PhoneVerifyWidget>
                                 },
                               );
                             } else {
-                              GoRouter.of(context).prepareAuthEvent();
-                              final smsCodeVal = _model.pinCodeController!.text;
-                              if (smsCodeVal.isEmpty) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content:
-                                        Text('Enter SMS verification code.'),
-                                  ),
-                                );
-                                return;
-                              }
-                              final phoneVerifiedUser =
-                                  await authManager.verifySmsCode(
-                                context: context,
-                                smsCode: smsCodeVal,
-                              );
-                              if (phoneVerifiedUser == null) {
-                                return;
-                              }
-
                               context.goNamedAuth(
                                 'CriarContaCell',
                                 context.mounted,
@@ -317,14 +300,6 @@ class _PhoneVerifyWidgetState extends State<PhoneVerifyWidget>
                                     ParamType.int,
                                   ),
                                 }.withoutNulls,
-                                extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
-                                    hasTransition: true,
-                                    transitionType:
-                                        PageTransitionType.leftToRight,
-                                    duration: Duration(milliseconds: 250),
-                                  ),
-                                },
                               );
                             }
                           },

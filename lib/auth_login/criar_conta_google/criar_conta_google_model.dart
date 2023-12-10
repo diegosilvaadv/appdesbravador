@@ -1,15 +1,15 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'criar_conta_email_widget.dart' show CriarContaEmailWidget;
+import 'criar_conta_google_widget.dart' show CriarContaGoogleWidget;
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
-class CriarContaEmailModel extends FlutterFlowModel<CriarContaEmailWidget> {
+class CriarContaGoogleModel extends FlutterFlowModel<CriarContaGoogleWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  final formKey1 = GlobalKey<FormState>();
   final formKey2 = GlobalKey<FormState>();
   final formKey3 = GlobalKey<FormState>();
-  final formKey1 = GlobalKey<FormState>();
   // State field(s) for PageView widget.
   PageController? pageViewController;
 
@@ -18,20 +18,6 @@ class CriarContaEmailModel extends FlutterFlowModel<CriarContaEmailWidget> {
           pageViewController!.page != null
       ? pageViewController!.page!.round()
       : 0;
-  // State field(s) for email widget.
-  FocusNode? emailFocusNode;
-  TextEditingController? emailController;
-  String? Function(BuildContext, String?)? emailControllerValidator;
-  // State field(s) for senha widget.
-  FocusNode? senhaFocusNode;
-  TextEditingController? senhaController;
-  late bool senhaVisibility;
-  String? Function(BuildContext, String?)? senhaControllerValidator;
-  // State field(s) for confSenha widget.
-  FocusNode? confSenhaFocusNode;
-  TextEditingController? confSenhaController;
-  late bool confSenhaVisibility;
-  String? Function(BuildContext, String?)? confSenhaControllerValidator;
   // State field(s) for yourName widget.
   FocusNode? yourNameFocusNode1;
   TextEditingController? yourNameController1;
@@ -67,23 +53,12 @@ class CriarContaEmailModel extends FlutterFlowModel<CriarContaEmailWidget> {
 
   @override
   void initState(BuildContext context) {
-    senhaVisibility = false;
-    confSenhaVisibility = false;
     yourNameController1Validator = _yourNameController1Validator;
   }
 
   @override
   void dispose() {
     unfocusNode.dispose();
-    emailFocusNode?.dispose();
-    emailController?.dispose();
-
-    senhaFocusNode?.dispose();
-    senhaController?.dispose();
-
-    confSenhaFocusNode?.dispose();
-    confSenhaController?.dispose();
-
     yourNameFocusNode1?.dispose();
     yourNameController1?.dispose();
 

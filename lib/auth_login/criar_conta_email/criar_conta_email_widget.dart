@@ -1,6 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/firebase_storage/storage.dart';
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -1540,6 +1540,9 @@ class _CriarContaEmailWidgetState extends State<CriarContaEmailWidget>
                                               validator: _model
                                                   .usernameControllerValidator
                                                   .asValidator(context),
+                                              inputFormatters: [
+                                                _model.usernameMask
+                                              ],
                                             ).animateOnPageLoad(animationsMap[
                                                 'textFieldOnPageLoadAnimation5']!),
                                           ),
@@ -1706,17 +1709,78 @@ class _CriarContaEmailWidgetState extends State<CriarContaEmailWidget>
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    Text(
-                                                      'Parabéns! Sua conta está criada!',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyLarge
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            fontWeight:
-                                                                FontWeight.bold,
+                                                    Row(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      children: [
+                                                        Flexible(
+                                                          child: Text(
+                                                            'Você é Diretor/Associado de algum clube de desbravador?',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyLarge
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                ),
                                                           ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      10.0,
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          child: Theme(
+                                                            data: ThemeData(
+                                                              checkboxTheme:
+                                                                  CheckboxThemeData(
+                                                                visualDensity:
+                                                                    VisualDensity
+                                                                        .compact,
+                                                                materialTapTargetSize:
+                                                                    MaterialTapTargetSize
+                                                                        .shrinkWrap,
+                                                                shape:
+                                                                    RoundedRectangleBorder(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              4.0),
+                                                                ),
+                                                              ),
+                                                              unselectedWidgetColor:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondaryText,
+                                                            ),
+                                                            child: Checkbox(
+                                                              value: _model
+                                                                      .checkboxValue ??=
+                                                                  false,
+                                                              onChanged:
+                                                                  (newValue) async {
+                                                                setState(() =>
+                                                                    _model.checkboxValue =
+                                                                        newValue!);
+                                                              },
+                                                              activeColor:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                              checkColor:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .info,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
                                                     ),
                                                     Padding(
                                                       padding:
@@ -1727,7 +1791,7 @@ class _CriarContaEmailWidgetState extends State<CriarContaEmailWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'Apenas mais alguns passos para você ser um #DesbradorSocialMidia',
+                                                        'Por favor, só marque essa opção se realmente for um diretor/associado.',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1907,16 +1971,11 @@ class _CriarContaEmailWidgetState extends State<CriarContaEmailWidget>
                                                   final selectedMedia =
                                                       await selectMediaWithSourceBottomSheet(
                                                     context: context,
+                                                    storageFolderPath:
+                                                        'fotosDesbravadores',
+                                                    imageQuality: 50,
                                                     allowPhoto: true,
-                                                    backgroundColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .secondaryBackground,
-                                                    textColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .primaryText,
-                                                    pickerFontFamily: 'Outfit',
+                                                    includeDimensions: true,
                                                   );
                                                   if (selectedMedia != null &&
                                                       selectedMedia.every((m) =>
@@ -1960,18 +2019,11 @@ class _CriarContaEmailWidgetState extends State<CriarContaEmailWidget>
                                                               .toList();
 
                                                       downloadUrls =
-                                                          (await Future.wait(
-                                                        selectedMedia.map(
-                                                          (m) async =>
-                                                              await uploadData(
-                                                                  m.storagePath,
-                                                                  m.bytes),
-                                                        ),
-                                                      ))
-                                                              .where((u) =>
-                                                                  u != null)
-                                                              .map((u) => u!)
-                                                              .toList();
+                                                          await uploadSupabaseStorageFiles(
+                                                        bucketName: 'templates',
+                                                        selectedFiles:
+                                                            selectedMedia,
+                                                      );
                                                     } finally {
                                                       ScaffoldMessenger.of(
                                                               context)
@@ -2551,7 +2603,8 @@ class _CriarContaEmailWidgetState extends State<CriarContaEmailWidget>
                                     !_model.formKey3.currentState!.validate()) {
                                   return;
                                 }
-                                if (_model.uploadedFileUrl.isEmpty) {
+                                if ((_model.uploadedLocalFile.bytes ?? [])
+                                        .isEmpty) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
@@ -2649,6 +2702,7 @@ class _CriarContaEmailWidgetState extends State<CriarContaEmailWidget>
                                       sobrevoce:
                                           _model.yourNameController2.text,
                                       title: _model.usernameController.text,
+                                      diretorClube: _model.checkboxValue,
                                     ));
 
                                 ScaffoldMessenger.of(context).showSnackBar(
