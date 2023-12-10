@@ -38,8 +38,6 @@ class CriarContaCellModel extends FlutterFlowModel<CriarContaCellWidget> {
   // State field(s) for username widget.
   FocusNode? usernameFocusNode;
   TextEditingController? usernameController;
-  final usernameMask =
-      MaskTextInputFormatter(mask: '@#######################################');
   String? Function(BuildContext, String?)? usernameControllerValidator;
   // State field(s) for yourName widget.
   FocusNode? yourNameFocusNode2;

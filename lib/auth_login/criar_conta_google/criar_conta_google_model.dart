@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import 'criar_conta_google_widget.dart' show CriarContaGoogleWidget;
 import 'package:flutter/material.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class CriarContaGoogleModel extends FlutterFlowModel<CriarContaGoogleWidget> {
   ///  State fields for stateful widgets in this page.
@@ -33,8 +32,6 @@ class CriarContaGoogleModel extends FlutterFlowModel<CriarContaGoogleWidget> {
   // State field(s) for username widget.
   FocusNode? usernameFocusNode;
   TextEditingController? usernameController;
-  final usernameMask =
-      MaskTextInputFormatter(mask: '@#######################################');
   String? Function(BuildContext, String?)? usernameControllerValidator;
   // State field(s) for yourName widget.
   FocusNode? yourNameFocusNode2;

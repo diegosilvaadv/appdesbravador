@@ -596,7 +596,9 @@ class _CriarContaGoogleWidgetState extends State<CriarContaGoogleWidget>
     _model.yourNameController2 ??= TextEditingController();
     _model.yourNameFocusNode2 ??= FocusNode();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
+          _model.usernameController?.text = '@';
+        }));
   }
 
   @override
@@ -985,9 +987,6 @@ class _CriarContaGoogleWidgetState extends State<CriarContaGoogleWidget>
                                               validator: _model
                                                   .usernameControllerValidator
                                                   .asValidator(context),
-                                              inputFormatters: [
-                                                _model.usernameMask
-                                              ],
                                             ).animateOnPageLoad(animationsMap[
                                                 'textFieldOnPageLoadAnimation2']!),
                                           ),
@@ -1389,8 +1388,13 @@ class _CriarContaGoogleWidgetState extends State<CriarContaGoogleWidget>
                                                                 const Duration(
                                                                     milliseconds:
                                                                         200),
-                                                            imageUrl: _model
-                                                                .uploadedFileUrl,
+                                                            imageUrl:
+                                                                valueOrDefault<
+                                                                    String>(
+                                                              _model
+                                                                  .uploadedFileUrl,
+                                                              'https://gthmauklpdygyjahreur.supabase.co/storage/v1/object/public/templates/fotosDesbravadores/Design%20sem%20nome%20(7).png',
+                                                            ),
                                                             width: 300.0,
                                                             height: 200.0,
                                                             fit: BoxFit.cover,
